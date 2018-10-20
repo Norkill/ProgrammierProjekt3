@@ -8,34 +8,39 @@ import java.util.Scanner;
 
 public class GameBoardModel {
 
-	public ArrayList<ArrayList<Point>> loadBoard(String fileName) {
+	private ArrayList<ArrayList<Point>> ways;
+
+	protected void loadBoard(String fileName) {
+
 		Scanner scanner = null;
 
 		try {
 			scanner = new Scanner(new File(("Boards/" + fileName)));
-			
-			
+
 			ArrayList<ArrayList<Point>> ways = new ArrayList<ArrayList<Point>>();
-			
-			while(scanner.hasNextLine()) {
+
+			while (scanner.hasNextLine()) {
 				Scanner tokenizer = new Scanner(scanner.nextLine());
 				ArrayList<Point> way = new ArrayList<>();
-				while(tokenizer.hasNextInt()) {
+				while (tokenizer.hasNextInt()) {
 					way.add(new Point(tokenizer.nextInt(), tokenizer.nextInt()));
 				}
 				ways.add(way);
 				tokenizer.close();
 			}
-			return ways;
-			
+			this.ways = ways;
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("Error Loading the Board!!");
 		} finally {
 			scanner.close();
 		}
-		return null;
 
+	}
+
+	public ArrayList<ArrayList<Point>> getWays() {
+		return ways;
 	}
 
 }
