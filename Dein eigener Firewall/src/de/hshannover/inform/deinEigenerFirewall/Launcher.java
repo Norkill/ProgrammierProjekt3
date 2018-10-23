@@ -12,7 +12,7 @@ public class Launcher {
 	
 
 	public void startGame() {
-		gc = new GameController();
+		gc = new GameController("Board1.txt");
 		guic = new GUIController();
 	}
 }

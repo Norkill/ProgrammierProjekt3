@@ -5,8 +5,10 @@ import java.util.ArrayList;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 
-public class NormalPaket extends Paket{
+public class NormalPaket extends Paket {
 
 	public NormalPaket(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
@@ -29,7 +31,7 @@ public class NormalPaket extends Paket{
 	@Override
 	protected void atEnd() {
 		gcHandler.setUserExperience(gcHandler.getUserExperience()+1);
-		
+		die();
 	}
 
 	
@@ -39,5 +41,7 @@ public class NormalPaket extends Paket{
 		gcHandler.removeEntity(this);
 		
 	}
+
+	
 
 }

@@ -31,7 +31,7 @@ public class GameControllerHandler {
 		em.removeEntity(e);
 	}
 	
-	protected ArrayList<ArrayList<Point>> getWays() {
+	public ArrayList<ArrayList<Point>> getWays() {
 		return gbm.getWays();
 	}
 

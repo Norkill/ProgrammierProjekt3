@@ -1,6 +1,8 @@
 package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
+import java.awt.geom.Ellipse2D;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public abstract class Paket extends Entity {
@@ -11,6 +13,8 @@ public abstract class Paket extends Entity {
 	private int targetNumber;
 	private boolean atTarget = false;
 	protected GameControllerHandler gcHandler;
+	protected Ellipse2D bounds;
+	protected BufferedImage image;
 
 	public Paket(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		this.gcHandler = gcHandler;
@@ -64,4 +68,16 @@ public abstract class Paket extends Entity {
 	protected abstract void atEnd();
 
 	protected abstract void die();
+	
+	public void setImage(BufferedImage img) {
+		this.image = img;
+	}
+	
+	public void setBounds(Ellipse2D bounds) {
+		this.bounds = bounds;
+	}
+	
+	public Ellipse2D getBounds() {
+		return bounds;
+	}
 }
