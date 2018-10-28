@@ -16,7 +16,7 @@ public class GameController {
 
 	private GameControllerHandler gcHandler;
 	private EntityManager entityManager;
-	private EventManager eventManager;
+	private WaveManager eventManager;
 	private GameBoardModel gameBoardModel;
 
 	private int viruses = 0;
@@ -34,7 +34,7 @@ public class GameController {
 		gameBoardModel.loadBoard(layout);
 
 		entityManager = new EntityManager(gcHandler);
-		eventManager = new EventManager(gcHandler);
+		eventManager = new WaveManager(gcHandler);
 	}
 
 	public void run() {
@@ -125,7 +125,7 @@ public class GameController {
 		return gameBoardModel;
 	}
 	
-	protected EventManager getEventManager() {
+	protected WaveManager getEventManager() {
 		return eventManager;
 	}
 	

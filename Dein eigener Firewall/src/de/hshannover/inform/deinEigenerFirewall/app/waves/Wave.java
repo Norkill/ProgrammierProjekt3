@@ -62,6 +62,7 @@ public abstract class Wave {
 			int paketNumber = 0;
 			int prob = probabilities[paketNumber];
 			while (i > prob) {
+				paketNumber++;
 				prob += probabilities[paketNumber];
 			}
 

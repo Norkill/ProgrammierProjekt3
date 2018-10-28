@@ -13,7 +13,7 @@ public class GameControllerHandler {
 	private GameController gc;
 	private GameBoardModel gbm;
 	private EntityManager em;
-	private EventManager evm;
+	private WaveManager evm;
 	
 	
 	public GameControllerHandler(GameController gameController) {
