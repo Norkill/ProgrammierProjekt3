@@ -8,7 +8,7 @@ public class EntityManager {
 	private ArrayList<Entity> entities;
 
 	public EntityManager(GameControllerHandler gcHandler) {
-		// TODO Auto-generated constructor stub
+		entities = new ArrayList<>();
 	}
 
 	public void tick() {

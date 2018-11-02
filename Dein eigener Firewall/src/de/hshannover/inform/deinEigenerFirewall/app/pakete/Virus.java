@@ -10,20 +10,17 @@ public class Virus extends Paket{
 
 	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 1;	
+		speed = 1;
+		System.out.println("Virus paket created");
 	}
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
-		
+
+		move();
 	}
 
-	@Override
-	protected void move() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	protected void remove() {

@@ -8,7 +8,7 @@ package de.hshannover.inform.deinEigenerFirewall.app;
  * @author Norbert
  *
  */
-public class GameController {
+public class GameController implements Runnable{
 
 	// false = menu, true = game
 	private boolean running = false;
@@ -28,11 +28,9 @@ public class GameController {
 
 	public GameController(String layout) {
 		this.layout = layout;
+		
+		gameBoardModel = new GameBoardModel(layout);
 		gcHandler = new GameControllerHandler(this);
-		gameBoardModel = new GameBoardModel();
-		// TODO: params to load different Maps
-		gameBoardModel.loadBoard(layout);
-
 		entityManager = new EntityManager(gcHandler);
 		eventManager = new WaveManager(gcHandler);
 	}

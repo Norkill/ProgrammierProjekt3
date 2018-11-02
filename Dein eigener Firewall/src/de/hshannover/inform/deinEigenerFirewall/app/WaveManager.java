@@ -31,6 +31,7 @@ public class WaveManager {
 		waves = new Wave[] { new NormalWave(gcHandler), new RandomWave(gcHandler), new SpamAttack(gcHandler),
 				new VirusAttack(gcHandler) };
 		waveProbabilities = new int[] { 40, 30, 20, 10 };
+		spawnTimer = new Timer();
 	}
 
 	/**
@@ -68,8 +69,10 @@ public class WaveManager {
 	 * @return true wenn moglich
 	 */
 	private boolean canSpawn() {
-		if (spawnTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (100 - waveNumber) / 100) / SPAWNS_IN_WAVE) {
-			return true;
+		if(actualWave != null) {
+			if (spawnTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (100 - waveNumber) / 100) / SPAWNS_IN_WAVE) {
+				return true;
+			}
 		}
 		return false;
 	}

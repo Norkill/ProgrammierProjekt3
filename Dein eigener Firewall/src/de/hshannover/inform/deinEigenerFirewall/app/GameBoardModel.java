@@ -10,14 +10,18 @@ public class GameBoardModel {
 
 	private ArrayList<ArrayList<Point>> ways;
 
-	protected void loadBoard(String fileName) {
+	public GameBoardModel(String boardpath) {
+		loadBoard(boardpath);
+	}
+	
+	private void loadBoard(String fileName) {
 
 		Scanner scanner = null;
 
 		try {
 			scanner = new Scanner(new File(("Boards/" + fileName)));
 
-			ArrayList<ArrayList<Point>> ways = new ArrayList<ArrayList<Point>>();
+			ArrayList<ArrayList<Point>> waystemp = new ArrayList<ArrayList<Point>>();
 
 			while (scanner.hasNextLine()) {
 				Scanner tokenizer = new Scanner(scanner.nextLine());
@@ -25,10 +29,10 @@ public class GameBoardModel {
 				while (tokenizer.hasNextInt()) {
 					way.add(new Point(tokenizer.nextInt(), tokenizer.nextInt()));
 				}
-				ways.add(way);
+				waystemp.add(way);
 				tokenizer.close();
 			}
-			this.ways = ways;
+			this.ways = waystemp;
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

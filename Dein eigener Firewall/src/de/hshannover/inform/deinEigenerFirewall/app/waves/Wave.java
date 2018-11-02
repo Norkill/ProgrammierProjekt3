@@ -5,6 +5,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 
@@ -21,10 +24,13 @@ public abstract class Wave {
 	protected int[] probabilities;
 
 	// Liste aller Pakate und ihre classen fur constructoren aufrufe
-	protected Class[] paketClasses;
+	protected Class[] paketClasses = {
+			NormalPaket.class,
+			Virus.class,
+			Spam.class
+	};
 
-	// Liste aller zu erzeugenden verfugbaren pakete
-	protected String[] paketNames = { "NormalPaket", "Virus", "Spam" };
+	
 
 	GameControllerHandler gcHandler;
 	private ArrayList<ArrayList<Point>> ways;
@@ -32,25 +38,14 @@ public abstract class Wave {
 	public Wave(GameControllerHandler gcHandler) {
 		this.gcHandler = gcHandler;
 		ways = gcHandler.getWays();
-		mapPakets();
+		
 	}
 
 	/**
 	 * Liest aller namen der Paketen und speichert die klassen in eine Map fur
 	 * konstruktoren zugriff
 	 */
-	private void mapPakets() {
-		try {
-			for (int i = 0; i < paketNames.length; i++) {
-
-				Class<?> clazz = Class.forName("de.hshannover.inform.deinEigenerFirewall.app.pakete." + paketNames[i]);
-				paketClasses[i] = clazz;
-			}
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
 
 	/**
 	 * Spawns eine einzige "Welle" in den Wave(der normalerweise aus mehreren wellen
@@ -69,7 +64,9 @@ public abstract class Wave {
 			// GameControllerHandler gcHandler, ArrayList<Point> way
 			try {
 				paketClasses[paketNumber].getConstructor(GameControllerHandler.class, ArrayList.class)
-						.newInstance(new Object[] { gcHandler, way });
+						.newInstance( gcHandler, way );
+				
+				
 			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				System.out.println("Error while creating Paket in Wave Class!");

@@ -11,19 +11,15 @@ public class Spam extends Paket{
 	public Spam(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
 		speed = 2;
+		System.out.println("Spam paket created");
 	}
 
 	@Override
 	public void tick() {
-		// TODO Auto-generated method stub
-		
+		move();
 	}
 
-	@Override
-	protected void move() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	protected void remove() {
