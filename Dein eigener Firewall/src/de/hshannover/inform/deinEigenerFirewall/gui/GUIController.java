@@ -28,6 +28,7 @@ public class GUIController {
 	private HiScoreMenu hsm;
 	private HelpMenu hm;
 	private GameController gc;
+	protected static Assets assets;
 
 	private Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
 
@@ -41,6 +42,7 @@ public class GUIController {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		init();
 
+		assets = new Assets();
 		frame.add(mm);
 		frame.revalidate();
 		frame.repaint();

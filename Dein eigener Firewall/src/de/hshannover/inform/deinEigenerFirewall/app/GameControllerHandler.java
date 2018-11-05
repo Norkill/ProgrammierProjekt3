@@ -55,7 +55,7 @@ public class GameControllerHandler {
 		return gc.getEntityManager();
 	}
 	
-	public int getTicks() {
-		return gc.getTicks();
+	public Ticker getTicker() {
+		return gc.getTicker();
 	}
 }

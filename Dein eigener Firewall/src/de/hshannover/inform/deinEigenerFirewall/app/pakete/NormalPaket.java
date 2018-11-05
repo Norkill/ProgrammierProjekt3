@@ -29,7 +29,6 @@ public class NormalPaket extends Paket {
 	protected void atEnd() {
 		gcHandler.setUserExperience(gcHandler.getUserExperience() + 1);
 		die();
-		System.out.println("Normal paket end of way");
 	}
 
 	// TODO: some animation things or sth, sounds etc

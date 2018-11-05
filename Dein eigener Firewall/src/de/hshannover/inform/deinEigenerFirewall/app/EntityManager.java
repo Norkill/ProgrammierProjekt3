@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class EntityManager extends Observable {
+public class EntityManager extends Observable{
 
 	private CopyOnWriteArrayList<Entity> entities;
 

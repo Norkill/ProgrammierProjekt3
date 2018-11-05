@@ -23,6 +23,7 @@ public abstract class Paket extends Entity {
 	}
 
 	private void getNextTarget() {
+		atTarget = false;
 		targetNumber++;
 		if (targetNumber >= way.size()) {
 			atEnd();
@@ -61,7 +62,6 @@ public abstract class Paket extends Entity {
 			getNextTarget();
 		}
 		moveTowardsTarget();
-		setChanged();
 	}
 
 	protected abstract void remove();

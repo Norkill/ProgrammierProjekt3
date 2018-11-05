@@ -33,7 +33,7 @@ public class GameFassade {
 		return gcHandler.getEntityManager();
 	}
 	
-	public int getGameTicks() {
-		return gcHandler.getTicks();
+	public Ticker getTicker() {
+		return gcHandler.getTicker();
 	}
 }

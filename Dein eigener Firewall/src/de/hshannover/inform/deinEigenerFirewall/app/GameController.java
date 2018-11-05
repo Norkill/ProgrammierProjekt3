@@ -1,5 +1,7 @@
 package de.hshannover.inform.deinEigenerFirewall.app;
 
+import java.util.Observable;
+
 /**
  * Die Klasse ist fur den Spielverlauf verantwortlich, es beinhaltet die ganze
  * Spielschleife, initializiert alle Managers, pruft die LoseConditions und
@@ -8,37 +10,36 @@ package de.hshannover.inform.deinEigenerFirewall.app;
  * @author Norbert
  *
  */
-public class GameController implements Runnable{
+public class GameController implements Runnable {
 
 	// false = menu, true = game
 	private boolean running = false;
 	private Thread thread;
 
 	private static final int FPS_LIMIT = 60;
-	private int ticks;
 	private GameControllerHandler gcHandler;
 	private EntityManager entityManager;
 	private WaveManager eventManager;
 	private GameBoardModel gameBoardModel;
 	private GameFassade gf;
+	private Ticker ticker;
 
 	private int viruses = 0;
 	private int userExperience = 100;
 	private boolean lost = false;
 	private boolean paused = false;
 
-	//private String layout;
+	// private String layout;
 
 	public GameController() {
-		//this.layout = layout;
-		
-		
+		// this.layout = layout;
+
 		gcHandler = new GameControllerHandler(this);
 		entityManager = new EntityManager(gcHandler);
-		
+		ticker = new Ticker();
 		gf = new GameFassade(gcHandler);
 	}
-	
+
 	public void initGameBoard(String layout) {
 		gameBoardModel = new GameBoardModel(layout);
 		eventManager = new WaveManager(gcHandler);
@@ -52,7 +53,7 @@ public class GameController implements Runnable{
 		long now;
 		long lastTime = System.nanoTime();
 		long timer = 0;
-		ticks = 0;
+		int ticks = 0;
 
 		while (running) {
 			if (paused) {
@@ -84,6 +85,7 @@ public class GameController implements Runnable{
 	private void tick() {
 		entityManager.tick();
 		eventManager.tick();
+		ticker.tick();
 
 	}
 
@@ -122,19 +124,19 @@ public class GameController implements Runnable{
 		running = false;
 		handleHighScore();
 	}
-	
+
 	private void handleHighScore() {
 
 	}
-	
+
 	protected GameBoardModel getGameBoardModel() {
 		return gameBoardModel;
 	}
-	
+
 	protected WaveManager getEventManager() {
 		return eventManager;
 	}
-	
+
 	protected EntityManager getEntityManager() {
 		return entityManager;
 	}
@@ -154,17 +156,14 @@ public class GameController implements Runnable{
 	protected void setUserExperience(int userExperience) {
 		this.userExperience = userExperience;
 	}
+
 	
-	public int getTicks() {
-		return ticks;
-	}
-	
+
 	public GameFassade getGameFassade() {
 		return gf;
 	}
 
-	
-	
-	
-	
+	public Ticker getTicker() {
+		return ticker;
+	}
 }

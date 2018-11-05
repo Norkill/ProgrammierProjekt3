@@ -9,10 +9,10 @@ import java.util.Observable;
  * @author Norbert
  *
  */
-public abstract class Entity extends Observable{
+public abstract class Entity {
 
 	protected double x, y;
-	protected BufferedImage img;
+	protected BufferedImage img = null;
 	protected Shape bounds;
 	
 	public abstract void tick();
