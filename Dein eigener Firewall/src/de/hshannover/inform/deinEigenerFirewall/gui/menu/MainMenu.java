@@ -21,6 +21,8 @@ public class MainMenu extends JComponent {
 	private JButton closeButton;
 	private JLabel difficulty;
 	private JLabel speed;
+	// TODO: Combobox or sth to implement
+	private String layout;
 
 	public MainMenu(GUIController guic) {
 		this.guic = guic;
@@ -33,7 +35,7 @@ public class MainMenu extends JComponent {
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 				
 		newGameButton = new JButton("Neues Spiel");		
-		newGameButton.addActionListener(e -> guic.setGameState());	
+		newGameButton.addActionListener(e -> guic.setGameState("Board1.txt"));	
 		
 		hiScoreButton = new JButton("HiScores");		
 		hiScoreButton.addActionListener(e -> guic.setHiScoreMenuState());		

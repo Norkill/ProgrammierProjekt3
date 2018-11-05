@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class GameBoardModel {
 
-	private ArrayList<ArrayList<Point>> ways;
+	private ArrayList<ArrayList<Point>> ways = null;
 
 	public GameBoardModel(String boardpath) {
 		loadBoard(boardpath);

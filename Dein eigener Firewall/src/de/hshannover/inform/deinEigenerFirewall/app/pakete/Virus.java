@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
 
-public class Virus extends Paket{
+public class Virus extends Paket {
 
 	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 1;
-		System.out.println("Virus paket created");
+		speed = 0.1;
+
 	}
 
 	@Override
@@ -20,23 +20,20 @@ public class Virus extends Paket{
 		move();
 	}
 
-	
-
 	@Override
 	protected void remove() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	protected void atEnd() {
-		// TODO Auto-generated method stub
-		
+		die();
 	}
 
 	@Override
 	protected void die() {
-		gcHandler.removeEntity(this);		
+		gcHandler.removeEntity(this);
 	}
 
 }

@@ -1,7 +1,5 @@
 package de.hshannover.inform.deinEigenerFirewall;
 
-import java.awt.Dimension;
-
 import javax.swing.JFrame;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
@@ -19,9 +17,10 @@ public class Launcher {
     }
 	
 	
+    // jetzt vom gui aufgerufen
 	/*public void startGame() {
-		gc = new GameController("Board1.txt");
-		guic = new GUIController();
+		gc = new GameController();
+		gc.initGameBoard("Board1.txt");
 		gc.start();
 	}*/
     

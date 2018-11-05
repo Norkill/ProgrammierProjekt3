@@ -2,13 +2,15 @@ package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-public class EntityManager {
+public class EntityManager extends Observable {
 
-	private ArrayList<Entity> entities;
+	private CopyOnWriteArrayList<Entity> entities;
 
 	public EntityManager(GameControllerHandler gcHandler) {
-		entities = new ArrayList<>();
+		entities = new CopyOnWriteArrayList<>();
 	}
 
 	public void tick() {
@@ -16,18 +18,19 @@ public class EntityManager {
 			e.tick();
 
 		}
-
 	}
 
 	public void addEntity(Entity e) {
 		entities.add(e);
+		setChanged();
+		notifyObservers(e);
 	}
 
 	public void removeEntity(Entity e) {
 		entities.remove(e);
 	}
 
-	protected ArrayList<Entity> getEntities() {
+	protected CopyOnWriteArrayList<Entity> getEntities() {
 		return entities;
 	}
 
@@ -43,4 +46,5 @@ public class EntityManager {
 		}
 		return null;
 	}
+
 }

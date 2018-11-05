@@ -14,36 +14,45 @@ public class GameController implements Runnable{
 	private boolean running = false;
 	private Thread thread;
 
+	private static final int FPS_LIMIT = 60;
+	private int ticks;
 	private GameControllerHandler gcHandler;
 	private EntityManager entityManager;
 	private WaveManager eventManager;
 	private GameBoardModel gameBoardModel;
+	private GameFassade gf;
 
 	private int viruses = 0;
 	private int userExperience = 100;
 	private boolean lost = false;
 	private boolean paused = false;
 
-	private String layout;
+	//private String layout;
 
-	public GameController(String layout) {
-		this.layout = layout;
+	public GameController() {
+		//this.layout = layout;
 		
-		gameBoardModel = new GameBoardModel(layout);
+		
 		gcHandler = new GameControllerHandler(this);
 		entityManager = new EntityManager(gcHandler);
+		
+		gf = new GameFassade(gcHandler);
+	}
+	
+	public void initGameBoard(String layout) {
+		gameBoardModel = new GameBoardModel(layout);
 		eventManager = new WaveManager(gcHandler);
 	}
 
 	public void run() {
 
-		int fps = 60;
-		double timePerTick = 1000000000 / fps; // nanosecs
+		
+		double timePerTick = 1000000000 / FPS_LIMIT; // nanosecs
 		double delta = 0;
 		long now;
 		long lastTime = System.nanoTime();
 		long timer = 0;
-		int ticks = 0;
+		ticks = 0;
 
 		while (running) {
 			if (paused) {
@@ -57,13 +66,11 @@ public class GameController implements Runnable{
 			lastTime = now;
 			if (delta >= 1) {
 				tick();
-
 				ticks++;
 				delta--;
 			}
 
 			if (timer >= 1000000000) {
-
 				System.out.println("Ticks and Frames: " + ticks);
 				ticks = 0;
 				timer = 0;
@@ -111,10 +118,11 @@ public class GameController implements Runnable{
 
 	}
 
-	private void backToMenu() {
+	protected void backToMenu() {
 		running = false;
+		handleHighScore();
 	}
-
+	
 	private void handleHighScore() {
 
 	}
@@ -146,6 +154,17 @@ public class GameController implements Runnable{
 	protected void setUserExperience(int userExperience) {
 		this.userExperience = userExperience;
 	}
+	
+	public int getTicks() {
+		return ticks;
+	}
+	
+	public GameFassade getGameFassade() {
+		return gf;
+	}
+
+	
+	
 	
 	
 }

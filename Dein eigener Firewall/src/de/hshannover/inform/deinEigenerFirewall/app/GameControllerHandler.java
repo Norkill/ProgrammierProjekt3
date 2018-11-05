@@ -2,6 +2,7 @@ package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Das ist ein Handler der ermoglicht und vereinfacht die kommunikation zwischen aller Klassen des Spielkerns
@@ -11,28 +12,23 @@ import java.util.ArrayList;
 public class GameControllerHandler {
 
 	private GameController gc;
-	private GameBoardModel gbm;
-	private EntityManager em;
-	private WaveManager evm;
+	
 	
 	
 	public GameControllerHandler(GameController gameController) {
 		gc = gameController;
-		gbm = gc.getGameBoardModel();
-		em = gc.getEntityManager();
-		evm = gc.getEventManager();
 	}
 	
-	protected ArrayList<Entity> getEntities(){
-		return em.getEntities();
+	protected CopyOnWriteArrayList<Entity> getEntities(){
+		return gc.getEntityManager().getEntities();
 	}
 	
 	public void removeEntity(Entity e) {
-		em.removeEntity(e);
+		gc.getEntityManager().removeEntity(e);
 	}
 	
 	public ArrayList<ArrayList<Point>> getWays() {
-		return gbm.getWays();
+		return gc.getGameBoardModel().getWays();
 	}
 
 	public int getViruses() {
@@ -51,7 +47,15 @@ public class GameControllerHandler {
 		gc.setUserExperience(userExperience);
 	}
 	
+	public void stopGame() {
+		gc.backToMenu();
+	}
 	
+	public EntityManager getEntityManager() {
+		return gc.getEntityManager();
+	}
 	
-	
+	public int getTicks() {
+		return gc.getTicks();
+	}
 }

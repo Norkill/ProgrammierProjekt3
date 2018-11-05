@@ -4,15 +4,17 @@ import java.awt.Point;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
+import de.hshannover.inform.deinEigenerFirewall.app.Entity;
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
-
 /**
- * Abstrakte klasse Wave, es generiert die Pakete nach wahrscheinlichkeiten die in child klassen definiert sind (zB. NormalWave, VirusAttack..)
+ * Abstrakte klasse Wave, es generiert die Pakete nach wahrscheinlichkeiten die
+ * in child klassen definiert sind (zB. NormalWave, VirusAttack..)
+ * 
  * @author Norbert
  *
  */
@@ -24,13 +26,8 @@ public abstract class Wave {
 	protected int[] probabilities;
 
 	// Liste aller Pakate und ihre classen fur constructoren aufrufe
-	protected Class[] paketClasses = {
-			NormalPaket.class,
-			Virus.class,
-			Spam.class
-	};
-
-	
+	@SuppressWarnings("rawtypes")
+	protected Class[] paketClasses = { NormalPaket.class, Virus.class, Spam.class };
 
 	GameControllerHandler gcHandler;
 	private ArrayList<ArrayList<Point>> ways;
@@ -38,19 +35,19 @@ public abstract class Wave {
 	public Wave(GameControllerHandler gcHandler) {
 		this.gcHandler = gcHandler;
 		ways = gcHandler.getWays();
-		
+
 	}
 
 	/**
 	 * Liest aller namen der Paketen und speichert die klassen in eine Map fur
 	 * konstruktoren zugriff
 	 */
-	
 
 	/**
 	 * Spawns eine einzige "Welle" in den Wave(der normalerweise aus mehreren wellen
 	 * besteht)
 	 */
+	@SuppressWarnings("unchecked")
 	public void spawn() {
 		for (ArrayList<Point> way : ways) {
 			int i = Utils.getRandomNumber100();
@@ -63,10 +60,9 @@ public abstract class Wave {
 
 			// GameControllerHandler gcHandler, ArrayList<Point> way
 			try {
-				paketClasses[paketNumber].getConstructor(GameControllerHandler.class, ArrayList.class)
-						.newInstance( gcHandler, way );
-				
-				
+				gcHandler.getEntityManager().addEntity((Entity) paketClasses[paketNumber]
+						.getConstructor(GameControllerHandler.class, ArrayList.class).newInstance(gcHandler, way));
+
 			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
 					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				System.out.println("Error while creating Paket in Wave Class!");
