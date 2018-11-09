@@ -1,7 +1,5 @@
 package de.hshannover.inform.deinEigenerFirewall.app;
 
-import java.util.Observable;
-
 /**
  * Die Klasse ist fur den Spielverlauf verantwortlich, es beinhaltet die ganze
  * Spielschleife, initializiert alle Managers, pruft die LoseConditions und
@@ -40,8 +38,8 @@ public class GameController implements Runnable {
 		gf = new GameFassade(gcHandler);
 	}
 
-	public void initGameBoard(String layout) {
-		gameBoardModel = new GameBoardModel(layout);
+	public void initGameBoard(String layout, int gameWidth, int gameHeight) {
+		gameBoardModel = new GameBoardModel(layout, gameWidth, gameHeight);
 		eventManager = new WaveManager(gcHandler);
 	}
 
@@ -83,6 +81,7 @@ public class GameController implements Runnable {
 	}
 
 	private void tick() {
+		ticker.tick();
 		entityManager.tick();
 		eventManager.tick();
 		ticker.tick();

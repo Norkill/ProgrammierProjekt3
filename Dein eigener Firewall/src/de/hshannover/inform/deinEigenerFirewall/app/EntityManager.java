@@ -1,11 +1,11 @@
 package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
-import java.util.ArrayList;
+import java.awt.Rectangle;
 import java.util.Observable;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class EntityManager extends Observable{
+public class EntityManager extends Observable {
 
 	private CopyOnWriteArrayList<Entity> entities;
 
@@ -35,14 +35,14 @@ public class EntityManager extends Observable{
 	}
 
 	public Paket getPaketAtLoc(Point p) {
-
-		for (Entity e : entities) {
-			if (e instanceof Paket) {
-				Paket paket = (Paket) e;
-				if (paket.getBounds().contains(p)) {
-					return paket;
-				}
+		for(Entity e : entities) {
+			if(e.isColliding(p)) {
+				System.out.println("Point: " + p.x + " " + p.y);
+				System.out.println("Entity coords" + e.getX() + " " + e.getY());
+				System.out.println(e.getCollisionBox().toString());
+				return (Paket)e;
 			}
+			
 		}
 		return null;
 	}

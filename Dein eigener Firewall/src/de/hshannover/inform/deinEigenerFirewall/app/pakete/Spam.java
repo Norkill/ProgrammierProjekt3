@@ -10,7 +10,7 @@ public class Spam extends Paket {
 
 	public Spam(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 0.2;
+		speed = 2;
 
 	}
 
@@ -20,13 +20,13 @@ public class Spam extends Paket {
 	}
 
 	@Override
-	protected void remove() {
-		// TODO Auto-generated method stub
-
+	public void remove() {
+		die();
 	}
 
 	@Override
 	protected void atEnd() {
+		System.out.println("spam at end");
 		die();
 	}
 

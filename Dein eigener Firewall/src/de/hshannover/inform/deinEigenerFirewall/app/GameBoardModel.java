@@ -9,8 +9,11 @@ import java.util.Scanner;
 public class GameBoardModel {
 
 	private ArrayList<ArrayList<Point>> ways = null;
-
-	public GameBoardModel(String boardpath) {
+	private int gameWidth, gameHeight;
+	
+	public GameBoardModel(String boardpath, int width, int height) {
+		gameWidth = width;
+		gameHeight = height;
 		loadBoard(boardpath);
 	}
 	
@@ -27,7 +30,7 @@ public class GameBoardModel {
 				Scanner tokenizer = new Scanner(scanner.nextLine());
 				ArrayList<Point> way = new ArrayList<>();
 				while (tokenizer.hasNextInt()) {
-					way.add(new Point(tokenizer.nextInt(), tokenizer.nextInt()));
+					way.add(new Point(tokenizer.nextInt()*gameWidth/100, tokenizer.nextInt()*gameHeight/100));
 				}
 				waystemp.add(way);
 				tokenizer.close();

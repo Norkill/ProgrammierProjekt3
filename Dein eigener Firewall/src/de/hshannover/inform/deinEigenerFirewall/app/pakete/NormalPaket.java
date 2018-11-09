@@ -10,7 +10,7 @@ public class NormalPaket extends Paket {
 
 	public NormalPaket(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 0.1;
+		speed = 1;
 
 	}
 
@@ -20,7 +20,7 @@ public class NormalPaket extends Paket {
 	}
 
 	@Override
-	protected void remove() {
+	public void remove() {
 		gcHandler.setUserExperience(gcHandler.getUserExperience() - 5);
 		die();
 	}

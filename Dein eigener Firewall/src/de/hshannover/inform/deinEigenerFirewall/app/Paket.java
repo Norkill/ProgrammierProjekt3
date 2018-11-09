@@ -64,7 +64,7 @@ public abstract class Paket extends Entity {
 		moveTowardsTarget();
 	}
 
-	protected abstract void remove();
+	public abstract void remove();
 
 	protected abstract void atEnd();
 

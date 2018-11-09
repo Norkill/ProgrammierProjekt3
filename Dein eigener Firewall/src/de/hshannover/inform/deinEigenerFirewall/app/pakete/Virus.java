@@ -10,7 +10,7 @@ public class Virus extends Paket {
 
 	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 0.1;
+		speed = 1;
 
 	}
 
@@ -21,9 +21,8 @@ public class Virus extends Paket {
 	}
 
 	@Override
-	protected void remove() {
-		// TODO Auto-generated method stub
-
+	public void remove() {
+		die();
 	}
 
 	@Override

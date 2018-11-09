@@ -12,7 +12,7 @@ public class WaveManager {
 	private Wave[] waves;
 	private int[] waveProbabilities;
 	private final long MILLIS_BETWEEN_WAVES = 10000;
-	private final long SPAWNS_IN_WAVE = 10;
+	private final long SPAWNS_IN_WAVE = 5;
 	private Timer waveTimer;
 	private Timer spawnTimer;
 	private Wave actualWave;

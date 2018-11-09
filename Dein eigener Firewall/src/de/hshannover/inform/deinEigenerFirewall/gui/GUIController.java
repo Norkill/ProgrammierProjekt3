@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameController;
 import de.hshannover.inform.deinEigenerFirewall.app.GameFassade;
@@ -28,6 +29,7 @@ public class GUIController {
 	private HiScoreMenu hsm;
 	private HelpMenu hm;
 	private GameController gc;
+	private MouseManager mouseManager;
 	protected static Assets assets;
 
 	private Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
@@ -36,6 +38,7 @@ public class GUIController {
 	private Map<Integer, JComponent> map;
 	private JFrame frame;
 
+	//private JPanel panel = new JPanel();
 	public GUIController(JFrame frame) {
 		this.frame = frame;
 		Graphics2D g2d = (Graphics2D)frame.getGraphics();
@@ -43,6 +46,8 @@ public class GUIController {
 		init();
 
 		assets = new Assets();
+		mouseManager = new MouseManager();
+		
 		frame.add(mm);
 		frame.revalidate();
 		frame.repaint();
@@ -94,11 +99,13 @@ public class GUIController {
 	}
 
 	public void setGameState(String layout) {
-		gc.initGameBoard(layout);
+		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
 		
 		gc.start();
 	
 		gd = new GameDrawer(this);
+		gd.addMouseListener(mouseManager);
+		mouseManager.addObserver(gd);
 		map.put(3, gd);
 		frame.remove(map.get(currentState));
 		frame.add(gd);
@@ -130,6 +137,14 @@ public class GUIController {
 	
 	public int getHeight() {
 		return frame.getHeight();
+	}
+	
+	public int getGameWidth() {
+		return getWidth()*8/10;
+	}
+	
+	public int getGameHeight() {
+		return getHeight();
 	}
 
 }
