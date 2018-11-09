@@ -15,7 +15,7 @@ import java.util.Observer;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
+import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.app.Entity;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
@@ -26,7 +26,8 @@ import de.hshannover.inform.deinEigenerFirewall.gui.Assets;
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
-public class GameDrawer extends JComponent implements Observer {
+@SuppressWarnings("serial")
+public class GameDrawer extends JPanel implements Observer {
 
 	private GUIController guic;
 	private JButton backButton;
@@ -131,7 +132,7 @@ public class GameDrawer extends JComponent implements Observer {
 			// arg - tick (new Frame must be rendered)
 		} else {
 			revalidate();
-			repaint();
+			
 		}
 	}
 

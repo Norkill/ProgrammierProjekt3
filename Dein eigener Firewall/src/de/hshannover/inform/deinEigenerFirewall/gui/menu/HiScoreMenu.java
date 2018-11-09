@@ -7,12 +7,13 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 
-public class HiScoreMenu extends JComponent {
+@SuppressWarnings("serial")
+public class HiScoreMenu extends JPanel {
 	private GUIController guic;
 	private JButton backButton;
 	// TODO: IMG HELP

@@ -8,7 +8,6 @@ import java.util.Map;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameController;
 import de.hshannover.inform.deinEigenerFirewall.app.GameFassade;
@@ -38,17 +37,19 @@ public class GUIController {
 	private Map<Integer, JComponent> map;
 	private JFrame frame;
 
-	//private JPanel panel = new JPanel();
+	
 	public GUIController(JFrame frame) {
 		this.frame = frame;
+		
 		Graphics2D g2d = (Graphics2D)frame.getGraphics();
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		init();
 
 		assets = new Assets();
 		mouseManager = new MouseManager();
+		frame.getContentPane().addMouseListener(mouseManager);
 		
-		frame.add(mm);
+		frame.getContentPane().add(mm);
 		frame.revalidate();
 		frame.repaint();
 		currentState = 0;
@@ -75,24 +76,24 @@ public class GUIController {
 	
 	//TODO: 1-2 siehe zeile!!
 	public void setMenuState() {
-		frame.remove(map.get(currentState));
-		frame.add(mm);
+		frame.getContentPane().remove(map.get(currentState));
+		frame.getContentPane().add(mm);
 		frame.revalidate();
 		frame.repaint();
 		currentState = 0;
 	}
 
 	public void setHiScoreMenuState() {
-		frame.remove(map.get(currentState));
-		frame.add(hsm);
+		frame.getContentPane().remove(map.get(currentState));
+		frame.getContentPane().add(hsm);
 		frame.revalidate();
 		frame.repaint();
 		currentState = 1;
 	}
 
 	public void setHelpMenuState() {
-		frame.remove(map.get(currentState));
-		frame.add(hm);
+		frame.getContentPane().remove(map.get(currentState));
+		frame.getContentPane().add(hm);
 		frame.revalidate();
 		frame.repaint();
 		currentState = 2;
@@ -100,15 +101,13 @@ public class GUIController {
 
 	public void setGameState(String layout) {
 		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
-		
 		gc.start();
 	
 		gd = new GameDrawer(this);
-		gd.addMouseListener(mouseManager);
 		mouseManager.addObserver(gd);
 		map.put(3, gd);
-		frame.remove(map.get(currentState));
-		frame.add(gd);
+		frame.getContentPane().remove(map.get(currentState));
+		frame.getContentPane().add(gd);
 		frame.revalidate();
 		frame.repaint();
 		currentState = 3;
@@ -132,11 +131,11 @@ public class GUIController {
 	}
 	
 	public int getWidth() {
-		return frame.getWidth();
+		return frame.getContentPane().getWidth();
 	}
 	
 	public int getHeight() {
-		return frame.getHeight();
+		return frame.getContentPane().getHeight();
 	}
 	
 	public int getGameWidth() {

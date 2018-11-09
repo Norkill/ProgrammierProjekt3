@@ -9,8 +9,8 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
@@ -20,7 +20,8 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
  * @author Norbert
  *
  */
-public class HelpMenu extends JComponent {
+@SuppressWarnings("serial")
+public class HelpMenu extends JPanel {
 
 	private GUIController guic;
 	private JButton backButton;
