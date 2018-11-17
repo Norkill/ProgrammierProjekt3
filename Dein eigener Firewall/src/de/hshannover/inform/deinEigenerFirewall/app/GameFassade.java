@@ -2,6 +2,7 @@ package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.Observer;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -35,5 +36,37 @@ public class GameFassade {
 	
 	public Ticker getTicker() {
 		return gcHandler.getTicker();
+	}
+	
+	public void addObserverToGameParameterManager(Observer o) {
+		gcHandler.getGameParameterManager().addObserver(o);
+	}
+	
+	public int getViruses() {
+		return gcHandler.getViruses();
+	}
+
+	public int getUserExperience() {
+		return gcHandler.getUserExperience();
+	}
+	
+	public int getTopHiScore() {
+		return gcHandler.getTopHiScore();
+	}
+	
+	public int getScore() {
+		return gcHandler.getScore();
+	}
+	
+	public void setPlayerName(String name) {
+		gcHandler.setPlayerName(name);
+	}
+	
+	public ArrayList<Integer> getHiScorePointsList() {
+		return gcHandler.getHiScorePointsList();
+	}
+	
+	public ArrayList<String> getHiScoreNamesList() {
+		return gcHandler.getHiScoreNamesList();
 	}
 }

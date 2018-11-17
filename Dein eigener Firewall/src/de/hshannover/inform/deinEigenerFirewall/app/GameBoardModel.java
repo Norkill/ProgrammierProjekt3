@@ -22,7 +22,7 @@ public class GameBoardModel {
 		Scanner scanner = null;
 
 		try {
-			scanner = new Scanner(new File(("Boards/" + fileName)));
+			scanner = new Scanner(new File(("res/Boards/" + fileName)));
 
 			ArrayList<ArrayList<Point>> waystemp = new ArrayList<ArrayList<Point>>();
 

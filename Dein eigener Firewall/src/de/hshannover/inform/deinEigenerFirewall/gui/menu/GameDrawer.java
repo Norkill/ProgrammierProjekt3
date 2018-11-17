@@ -14,7 +14,6 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.app.Entity;
@@ -30,15 +29,10 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 public class GameDrawer extends JPanel implements Observer {
 
 	private GUIController guic;
-	private JButton backButton;
 	private BufferedImage backgroundImage;
-
-	// temp
-	int mouseX = 0;
-	int mouseY = 0;
+	private GameUIPanel gameUIPanel;
 	
 	public GameDrawer(GUIController guic) {
-
 		this.guic = guic;
 		init();
 	}
@@ -47,20 +41,16 @@ public class GameDrawer extends JPanel implements Observer {
 		// initialize and set bounds for window(layout)
 		setLayout(null);
 		setBounds(0, 0, guic.getWidth(), guic.getHeight());
-
+		
+		// inits a new UIPanel for game parameters on the side
+		gameUIPanel = new GameUIPanel(guic);
+		gameUIPanel.setLocation(guic.getGameWidth(), 0);
+		add(gameUIPanel);
+		
 		// add background image and set it to size of the window
-		backgroundImage = Utils.scaleImage(Utils.loadImage("images/gameBackground.png"), guic.getGameWidth(),
+		backgroundImage = Utils.scaleImage(Utils.loadImage("res/images/gameBackground.png"), guic.getGameWidth(),
 				guic.getGameHeight());
 		drawWaysOnBackground(backgroundImage);
-
-		// add button to go back to menu
-		backButton = new JButton("Spiel beenden");
-		backButton.addActionListener(e -> {
-			guic.setMenuState();
-			guic.getGameFassade().stopGame();
-		});
-		backButton.setBounds(guic.getGameWidth(), 0, guic.getWidth() - guic.getGameWidth(), 100);
-		add(backButton);
 
 		// observes entity manager for changes in Entities List
 		guic.getGameFassade().getEntityManager().addObserver(this);
@@ -80,10 +70,10 @@ public class GameDrawer extends JPanel implements Observer {
 			for (int i = 1; i < way.size(); i++) {
 				Graphics2D g2d = background.createGraphics();
 				g2d.setColor(new Color(200, 200, 0));
-				
+
 				g2d.setStroke((Stroke) new BasicStroke(4f, BasicStroke.CAP_BUTT, BasicStroke.CAP_ROUND));
-				g2d.drawLine((int) (way.get(i - 1).getX()), (int) (way.get(i - 1).getY()),
-						(int) (way.get(i).getX()), (int) (way.get(i).getY()));
+				g2d.drawLine((int) (way.get(i - 1).getX()), (int) (way.get(i - 1).getY()), (int) (way.get(i).getX()),
+						(int) (way.get(i).getY()));
 				g2d.dispose();
 			}
 		}
@@ -96,8 +86,6 @@ public class GameDrawer extends JPanel implements Observer {
 	public void paintComponent(Graphics g) {
 		g.drawImage(backgroundImage, 0, 0, guic.getGameWidth(), guic.getGameHeight(), null);
 		paintEntities(g);
-		g.drawLine(mouseX - 5, mouseY, mouseX +5, mouseY);
-		g.drawLine(mouseX, mouseY - 5 , mouseX, mouseY+5);
 		revalidate();
 		repaint();
 	}
@@ -107,7 +95,7 @@ public class GameDrawer extends JPanel implements Observer {
 		CopyOnWriteArrayList<Entity> entities = guic.getGameFassade().getEntities();
 		for (Entity e : entities) {
 			Rectangle r = e.getCollisionBox();
-			g.drawImage(e.getImg(), (int) r.getX(), (int) r.getY(), (int)r.getWidth(), (int)r.getHeight(), null);
+			g.drawImage(e.getImg(), (int) r.getX(), (int) r.getY(), (int) r.getWidth(), (int) r.getHeight(), null);
 
 		}
 	}
@@ -122,7 +110,6 @@ public class GameDrawer extends JPanel implements Observer {
 	 */
 	@Override
 	public void update(Observable obs, Object arg) {
-
 		// arg - newly added entity, if so give it a new image
 		if (arg instanceof Entity) {
 			setEntityImage((Entity) arg);
@@ -132,7 +119,6 @@ public class GameDrawer extends JPanel implements Observer {
 			// arg - tick (new Frame must be rendered)
 		} else {
 			revalidate();
-			
 		}
 	}
 
@@ -147,18 +133,19 @@ public class GameDrawer extends JPanel implements Observer {
 		} else if (e instanceof Spam) {
 			e.setImg(Assets.spamImgs[0]);
 		}
-
 	}
 
+	/**
+	 * Handles click from observable mouseManager, asks entityManager if Paket was
+	 * clicked and removes it if so
+	 * 
+	 * @param arg MouseEvent
+	 */
 	private void handleClick(Object arg) {
-		MouseEvent a = (MouseEvent) arg;
-		mouseX = a.getX();
-		mouseY = a.getY();
 		MouseEvent e = (MouseEvent) arg;
 		Paket p = guic.getGameFassade().getEntityManager().getPaketAtLoc(e.getPoint());
 		if (p != null) {
 			p.remove();
 		}
 	}
-
 }

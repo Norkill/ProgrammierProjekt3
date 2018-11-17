@@ -42,7 +42,7 @@ public class HelpMenu extends JPanel {
 		backButton = new JButton("Zuruck");
 		backButton.addActionListener(e -> guic.setMenuState());
 
-		helpImage = Utils.loadImage("images/helpImage.png");
+		helpImage = Utils.loadImage("res/images/helpImage.png");
 		imageLabel = new JLabel(new ImageIcon(helpImage));
 
 		add(backButton);

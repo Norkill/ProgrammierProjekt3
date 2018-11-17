@@ -21,13 +21,14 @@ public class NormalPaket extends Paket {
 
 	@Override
 	public void remove() {
-		gcHandler.setUserExperience(gcHandler.getUserExperience() - 5);
+		gcHandler.removeUserExperience(5);
 		die();
 	}
 
 	@Override
 	protected void atEnd() {
-		gcHandler.setUserExperience(gcHandler.getUserExperience() + 1);
+		gcHandler.addUserExperience(1);
+		gcHandler.addScore(1);
 		die();
 	}
 

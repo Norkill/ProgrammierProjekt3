@@ -30,21 +30,61 @@ public class GameControllerHandler {
 	public ArrayList<ArrayList<Point>> getWays() {
 		return gc.getGameBoardModel().getWays();
 	}
-
-	public int getViruses() {
-		return gc.getViruses();
+	
+	public GameParameterManager getGameParameterManager() {
+		return gc.getGameParameterManager();
+	}
+	
+	public void setLost() {
+		gc.setLost();
 	}
 
-	public void setViruses(int viruses) {
-		gc.setViruses(viruses);
+	public int getViruses() {
+		return gc.getGameParameterManager().getViruses();
+	}
+	
+	public void removeVirus() {
+		gc.getGameParameterManager().removeVirus();
+	}
+	
+	public void addVirus() {
+		gc.getGameParameterManager().addVirus();
 	}
 
 	public int getUserExperience() {
-		return gc.getUserExperience();
+		return gc.getGameParameterManager().getUserExperience();
 	}
 
-	public void setUserExperience(int userExperience) {
-		gc.setUserExperience(userExperience);
+	public void addUserExperience(int amount) {
+		gc.getGameParameterManager().addUserExperience(amount);
+	}
+	
+	public void removeUserExperience(int amount) {
+		gc.getGameParameterManager().removeUserExperience(amount);
+	}
+	
+	public int getTopHiScore() {
+		return gc.getGameParameterManager().getTopHiScore();
+	}
+	
+	public int getScore() {
+		return gc.getGameParameterManager().getScore();
+	}
+	
+	public void addScore(int amount) {
+		gc.getGameParameterManager().addScore(amount);
+	}
+	
+	public void removeScore(int amount) {
+		gc.getGameParameterManager().removeScore(amount);
+	}
+	
+	public ArrayList<Integer> getHiScorePointsList() {
+		return gc.getGameParameterManager().getHiScorePointsList();
+	}
+	
+	public ArrayList<String> getHiScoreNamesList() {
+		return gc.getGameParameterManager().getHiScoreNamesList();
 	}
 	
 	public void stopGame() {
@@ -57,5 +97,9 @@ public class GameControllerHandler {
 	
 	public Ticker getTicker() {
 		return gc.getTicker();
+	}
+	
+	public void setPlayerName(String name) {
+		gc.getGameParameterManager().setPlayerName(name);
 	}
 }

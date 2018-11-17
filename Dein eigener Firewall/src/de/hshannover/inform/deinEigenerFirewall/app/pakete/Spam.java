@@ -21,12 +21,14 @@ public class Spam extends Paket {
 
 	@Override
 	public void remove() {
+		gcHandler.addUserExperience(1);
+		gcHandler.addScore(1);
 		die();
 	}
 
 	@Override
 	protected void atEnd() {
-		System.out.println("spam at end");
+		gcHandler.removeUserExperience(5);
 		die();
 	}
 

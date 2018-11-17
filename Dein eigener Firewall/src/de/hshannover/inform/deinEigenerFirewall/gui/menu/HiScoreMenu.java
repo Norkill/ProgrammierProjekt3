@@ -2,10 +2,11 @@ package de.hshannover.inform.deinEigenerFirewall.gui.menu;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,25 +18,37 @@ public class HiScoreMenu extends JPanel {
 	private GUIController guic;
 	private JButton backButton;
 	// TODO: IMG HELP
-	private JLabel platzhalter;
+	private JLabel[][] listings = new JLabel[10][2];
+	private JLabel label = new JLabel("Hall of Fame");
 	
 	public HiScoreMenu(GUIController guic) {
 		this.guic = guic;
 		
-		initHelp();
+		initHiScore();
 	}
 	
-	private void initHelp() {
-		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+	private void initHiScore() {
+		setLayout(new GridLayout(12, 2));
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 		
 		backButton = new JButton("Zuruck");		
 		backButton.addActionListener(e -> guic.setMenuState());
 		
-		platzhalter = new JLabel("HiScore Implementieren");
 		
-		add(platzhalter);
-		add(Box.createRigidArea(new Dimension(0,15)));
+		
+		add(label);
+		add(Box.createRigidArea(new Dimension(0, 15)));
+		ArrayList<Integer> scores = guic.getGameFassade().getHiScorePointsList();
+		ArrayList<String> names = guic.getGameFassade().getHiScoreNamesList();
+		
+		for(int i=0; i<10; i++) {
+			listings[i][0] = new JLabel(names.get(i));
+			listings[i][1] = new JLabel("" + scores.get(i));
+			add(listings[i][0]);
+			add(listings[i][1]);
+		}
+		
+		
 		add(backButton);
 		
 		for(Component c : getComponents()) {

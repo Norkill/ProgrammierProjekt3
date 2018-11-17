@@ -17,9 +17,8 @@ import de.hshannover.inform.deinEigenerFirewall.gui.menu.HiScoreMenu;
 import de.hshannover.inform.deinEigenerFirewall.gui.menu.MainMenu;
 
 /**
- * Kontroller-klasse zum kontrollieren welches menu gerade aktiv ist und als schnittstelle zum GameController
+ * GUIController class which maintains the correct usage of JFrame, setting menus and communication between GameController
  * @author Norbert
- *
  */
 public class GUIController {
 
@@ -37,7 +36,10 @@ public class GUIController {
 	private Map<Integer, JComponent> map;
 	private JFrame frame;
 
-	
+	/**
+	 * Creates a new GUIController object which maintains the correct usage of JFrame, setting menus and communication between GameController
+	 * @param frame
+	 */
 	public GUIController(JFrame frame) {
 		this.frame = frame;
 		
@@ -52,16 +54,17 @@ public class GUIController {
 		frame.getContentPane().add(mm);
 		frame.revalidate();
 		frame.repaint();
+		frame.pack();
 		currentState = 0;
 		
 	}
 
 	private void init() {
+		gc = new GameController();
 		mm = new MainMenu(this);
 		hsm = new HiScoreMenu(this);
 		hm = new HelpMenu(this);
 		gd = null;
-		gc = new GameController();
 		
 		map = new HashMap<>();
 		map.put(0, mm);
@@ -70,36 +73,46 @@ public class GUIController {
 	}
 
 	/**
-	 * wenn diese methode benutzt wird, wird der GUI Controller ab jetzt das Menu
-	 * auf dem JFrame zeigen
+	 * Shows main menu on the JFrame
 	 */
-	
-	//TODO: 1-2 siehe zeile!!
 	public void setMenuState() {
 		frame.getContentPane().remove(map.get(currentState));
 		frame.getContentPane().add(mm);
 		frame.revalidate();
 		frame.repaint();
+		frame.pack();
 		currentState = 0;
 	}
 
+	/**
+	 * shows HiScore menu on JFrame
+	 */
 	public void setHiScoreMenuState() {
 		frame.getContentPane().remove(map.get(currentState));
 		frame.getContentPane().add(hsm);
 		frame.revalidate();
 		frame.repaint();
+		frame.pack();
 		currentState = 1;
 	}
 
+	/**
+	 * Shows help menu on the JFrame
+	 */
 	public void setHelpMenuState() {
 		frame.getContentPane().remove(map.get(currentState));
 		frame.getContentPane().add(hm);
 		frame.revalidate();
 		frame.repaint();
+		frame.pack();
 		currentState = 2;
 	}
 
+	/**
+	 * Shows game on the JFrame
+	 */
 	public void setGameState(String layout) {
+		gc.resetGame();
 		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
 		gc.start();
 	
@@ -110,40 +123,67 @@ public class GUIController {
 		frame.getContentPane().add(gd);
 		frame.revalidate();
 		frame.repaint();
+		frame.pack();
 		currentState = 3;
 	}
 
+	/**
+	 * exits program
+	 */
 	public void setEndedState() {
 		currentState = -1;
 		System.exit(0);
 	}
 
+	/**
+	 * shows actual state as int, which means:
+	 * 0 - main menu, 
+	 * 1 - hiscore menu, 
+	 * 2 - help menu, 
+	 * 3 - game
+	 */
 	public int getCurrentState() {
 		return currentState;
 	}
 
+	/**
+	 * @return actual font to display most of the text in menus and game
+	 */
 	public Font getFont() {
 		return font;
 	}
 	
+	/**
+	 * @return gamefassade object to get objects from game needed to display it
+	 */
 	public GameFassade getGameFassade() {
 		return gc.getGameFassade();
 	}
 	
+	/**
+	 * @return width of the pane inside the JFrame
+	 */
 	public int getWidth() {
 		return frame.getContentPane().getWidth();
 	}
-	
+	/**
+	 * @return height of the pane inside the JFrame
+	 */
 	public int getHeight() {
 		return frame.getContentPane().getHeight();
 	}
-	
+	/**
+	 * @return width of the game itself - space for UI elements
+	 */
 	public int getGameWidth() {
 		return getWidth()*8/10;
 	}
-	
+	/**
+	 * @return height of the game itself - space for UI elements
+	 */
 	public int getGameHeight() {
 		return getHeight();
 	}
-
+	
+	
 }

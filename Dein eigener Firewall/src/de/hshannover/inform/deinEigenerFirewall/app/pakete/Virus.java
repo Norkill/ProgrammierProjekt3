@@ -16,17 +16,21 @@ public class Virus extends Paket {
 
 	@Override
 	public void tick() {
-
 		move();
 	}
 
 	@Override
 	public void remove() {
+		gcHandler.addUserExperience(1);
+		gcHandler.addScore(1);
 		die();
 	}
 
 	@Override
 	protected void atEnd() {
+		gcHandler.addVirus();
+		gcHandler.removeUserExperience(10);
+		gcHandler.removeScore(5);
 		die();
 	}
 

@@ -16,9 +16,6 @@ public class MouseManager extends Observable implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		setChanged();
 		notifyObservers(e);
-		System.out.println("Click!");
-		System.out.println(e.getX() + " " + e.getY());
-
 	}
 
 	@Override

@@ -36,7 +36,7 @@ public class MainMenu extends JPanel {
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 				
 		newGameButton = new JButton("Neues Spiel");		
-		newGameButton.addActionListener(e -> guic.setGameState("testBoard.txt"));	
+		newGameButton.addActionListener(e -> guic.setGameState("Board1.txt"));	
 		
 		hiScoreButton = new JButton("HiScores");		
 		hiScoreButton.addActionListener(e -> guic.setHiScoreMenuState());		

@@ -19,23 +19,27 @@ public class GameController implements Runnable {
 	private EntityManager entityManager;
 	private WaveManager eventManager;
 	private GameBoardModel gameBoardModel;
+	private GameParameterManager gpm;
 	private GameFassade gf;
 	private Ticker ticker;
 
-	private int viruses = 0;
-	private int userExperience = 100;
 	private boolean lost = false;
-	private boolean paused = false;
-
-	// private String layout;
 
 	public GameController() {
-		// this.layout = layout;
+		init();
+	}
 
+	private void init() {
 		gcHandler = new GameControllerHandler(this);
 		entityManager = new EntityManager(gcHandler);
 		ticker = new Ticker();
+		gpm = new GameParameterManager(gcHandler);
 		gf = new GameFassade(gcHandler);
+	}
+
+	public void resetGame() {
+		entityManager = new EntityManager(gcHandler);
+		gpm = new GameParameterManager(gcHandler);
 	}
 
 	public void initGameBoard(String layout, int gameWidth, int gameHeight) {
@@ -45,7 +49,6 @@ public class GameController implements Runnable {
 
 	public void run() {
 
-		
 		double timePerTick = 1000000000 / FPS_LIMIT; // nanosecs
 		double delta = 0;
 		long now;
@@ -53,10 +56,7 @@ public class GameController implements Runnable {
 		long timer = 0;
 		int ticks = 0;
 
-		while (running) {
-			if (paused) {
-				handlePaused();
-			}
+		while (running && !lost) {
 
 			now = System.nanoTime();
 			delta += (now - lastTime) / timePerTick;
@@ -75,9 +75,7 @@ public class GameController implements Runnable {
 				timer = 0;
 			}
 		}
-
 		stop();
-		handleHighScore();
 	}
 
 	private void tick() {
@@ -85,7 +83,6 @@ public class GameController implements Runnable {
 		entityManager.tick();
 		eventManager.tick();
 		ticker.tick();
-
 	}
 
 	public synchronized void start() {
@@ -100,7 +97,6 @@ public class GameController implements Runnable {
 		if (!running)
 			return;
 		running = false;
-
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
@@ -108,24 +104,12 @@ public class GameController implements Runnable {
 		}
 	}
 
-	private void checkLoseConditions() {
-		if (viruses > 2)
-			lost = true;
-		if (userExperience < 1)
-			lost = true;
-	}
-
-	private void handlePaused() {
-
-	}
-
 	protected void backToMenu() {
 		running = false;
-		handleHighScore();
 	}
-
-	private void handleHighScore() {
-
+	
+	public GameParameterManager getGameParameterManager() {
+		return gpm;
 	}
 
 	protected GameBoardModel getGameBoardModel() {
@@ -140,29 +124,15 @@ public class GameController implements Runnable {
 		return entityManager;
 	}
 
-	protected int getViruses() {
-		return viruses;
-	}
-
-	protected void setViruses(int viruses) {
-		this.viruses = viruses;
-	}
-
-	protected int getUserExperience() {
-		return userExperience;
-	}
-
-	protected void setUserExperience(int userExperience) {
-		this.userExperience = userExperience;
-	}
-
-	
-
 	public GameFassade getGameFassade() {
 		return gf;
 	}
 
 	public Ticker getTicker() {
 		return ticker;
+	}
+	
+	protected void setLost() {
+		this.lost = true;
 	}
 }
