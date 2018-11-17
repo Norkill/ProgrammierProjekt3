@@ -10,7 +10,7 @@ public class NormalPaket extends Paket {
 
 	public NormalPaket(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 1;
+		speed = 1 * gcHandler.getGameSpeed();
 
 	}
 

@@ -19,10 +19,17 @@ public class GameParameterManager extends Observable {
 	private GameControllerHandler gcHandler;
 	private ArrayList<Integer> hiScoreList;
 	private ArrayList<String> hiScoreNames;
+	private double gameSpeed;
+	private int scoreMultiplayer = 1;
 
 	public GameParameterManager(GameControllerHandler gcHandler) {
 		this.gcHandler = gcHandler;
 		initHiScoreList();
+		
+	}
+
+	protected void setScoreMultiplayer() {
+		scoreMultiplayer = Math.max(1, (int)(gameSpeed/2.0 * gcHandler.getWays().size() / 2.0));
 	}
 
 	protected int getViruses() {
@@ -41,7 +48,7 @@ public class GameParameterManager extends Observable {
 		if (viruses > 2) {
 			gcHandler.setLost();
 			setChanged();
-			notifyObservers(true);
+			notifyObservers();
 			handleHighScore();
 		}
 		setChanged();
@@ -65,7 +72,7 @@ public class GameParameterManager extends Observable {
 		if (userExperience < 1) {
 			gcHandler.setLost();
 			setChanged();
-			notifyObservers(true);
+			notifyObservers();
 			handleHighScore();
 		}
 		setChanged();
@@ -73,11 +80,11 @@ public class GameParameterManager extends Observable {
 	}
 
 	protected void addScore(int amount) {
-		score += amount;
+		score += (amount * scoreMultiplayer);
 		setChanged();
 		notifyObservers();
 	}
-	
+
 	protected void removeScore(int amount) {
 		score -= amount;
 		setChanged();
@@ -104,19 +111,19 @@ public class GameParameterManager extends Observable {
 	public void setPlayerName(String name) {
 		playerName = name;
 	}
-	
+
 	public int getTopHiScore() {
 		return hiScoreList.get(0);
 	}
-	
+
 	public int getScore() {
 		return score;
 	}
-	
+
 	public ArrayList<Integer> getHiScorePointsList() {
 		return hiScoreList;
 	}
-	
+
 	public ArrayList<String> getHiScoreNamesList() {
 		return hiScoreNames;
 	}
@@ -126,19 +133,24 @@ public class GameParameterManager extends Observable {
 	 * HiScore list, if so waits till the mane gets written by Menu component and
 	 * adds it to the hiscore list
 	 */
+
 	protected void handleHighScore() {
-		int index = 11;
+		int index = 10;
 		for (int i = 0; i < 10; i++) {
 			if (score > hiScoreList.get(i)) {
 				index = i;
+				break;
 			}
 		}
 		// if hiscore better than any of current 10 scores insert on the list
-		if (index < 11) {
+		if (index < 10) {
 			// Wait for input in menu
+			setChanged();
+			notifyObservers(new Integer(index + 1));
 			while (playerName == null) {
-				//if(playerName != null) 
-				//	break;
+
+				if (playerName != null)
+					break;
 			}
 			if (playerName == "") {
 				playerName = "Anonymous";
@@ -161,8 +173,19 @@ public class GameParameterManager extends Observable {
 			} catch (IOException e) {
 				System.out.println("Could not save the hiscore!");
 			}
-
+		} else {
+			setChanged();
+			notifyObservers(new Integer(-1));
 		}
+		
+	}
+
+	public void setGameSpeed(Double speed) {
+		gameSpeed = speed;
+	}
+	
+	public double getGameSpeed() {
+		return gameSpeed;
 	}
 
 }

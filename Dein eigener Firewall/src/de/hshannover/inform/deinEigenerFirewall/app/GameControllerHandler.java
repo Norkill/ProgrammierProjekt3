@@ -102,4 +102,8 @@ public class GameControllerHandler {
 	public void setPlayerName(String name) {
 		gc.getGameParameterManager().setPlayerName(name);
 	}
+	
+	public double getGameSpeed() {
+		return gc.getGameParameterManager().getGameSpeed();
+	}
 }

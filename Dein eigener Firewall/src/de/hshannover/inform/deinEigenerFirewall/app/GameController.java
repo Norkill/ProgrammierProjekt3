@@ -44,6 +44,7 @@ public class GameController implements Runnable {
 
 	public void initGameBoard(String layout, int gameWidth, int gameHeight) {
 		gameBoardModel = new GameBoardModel(layout, gameWidth, gameHeight);
+		gpm.setScoreMultiplayer();
 		eventManager = new WaveManager(gcHandler);
 	}
 
@@ -134,5 +135,9 @@ public class GameController implements Runnable {
 	
 	protected void setLost() {
 		this.lost = true;
+	}
+
+	public void setSpeed(Double speed) {
+		gpm.setGameSpeed(speed);		
 	}
 }

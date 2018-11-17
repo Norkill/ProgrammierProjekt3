@@ -88,6 +88,7 @@ public class GUIController {
 	 * shows HiScore menu on JFrame
 	 */
 	public void setHiScoreMenuState() {
+		hsm.resetScores();
 		frame.getContentPane().remove(map.get(currentState));
 		frame.getContentPane().add(hsm);
 		frame.revalidate();
@@ -110,9 +111,12 @@ public class GUIController {
 
 	/**
 	 * Shows game on the JFrame
+	 * @param speed of the game
+	 * @param layout of game board to play on
 	 */
-	public void setGameState(String layout) {
+	public void setGameState(Double speed, String layout) {
 		gc.resetGame();
+		gc.setSpeed(speed);
 		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
 		gc.start();
 	
@@ -183,7 +187,5 @@ public class GUIController {
 	 */
 	public int getGameHeight() {
 		return getHeight();
-	}
-	
-	
+	}	
 }

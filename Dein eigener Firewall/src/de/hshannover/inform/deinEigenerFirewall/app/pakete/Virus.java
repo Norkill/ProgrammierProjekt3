@@ -10,7 +10,7 @@ public class Virus extends Paket {
 
 	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 1;
+		speed = 1 * gcHandler.getGameSpeed();
 
 	}
 

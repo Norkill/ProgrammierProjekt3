@@ -10,7 +10,7 @@ public class Spam extends Paket {
 
 	public Spam(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 2;
+		speed = 2 * gcHandler.getGameSpeed();
 
 	}
 
