@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
 
+/**
+ * Spam paket, removes userExperience when reaches end
+ * @author Norbert
+ *
+ */
 public class Spam extends Paket {
 
 	public Spam(GameControllerHandler gcHandler, ArrayList<Point> way) {

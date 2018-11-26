@@ -12,9 +12,8 @@ public class Main {
 	
 
 	public static void main(String[] args) {
-		Launcher launcher = new Launcher();
 		initFrame();
-		launcher.lauchGUI(frame);
+		Launcher.lauchGUI(frame);
 	}
 	
 	

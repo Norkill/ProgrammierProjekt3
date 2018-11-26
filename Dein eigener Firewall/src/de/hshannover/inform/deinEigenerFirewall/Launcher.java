@@ -6,14 +6,12 @@ import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 
 public class Launcher {
 	
-	private GUIController guic ;
-	
 	/*
 	 * erzeugt neues GUI anhand vorhandenes JFRAME
 	 */
-    public void lauchGUI(JFrame frame) {
+    public static void lauchGUI(JFrame frame) {
     	
-    	guic = new GUIController(frame);
+    	new GUIController(frame);
     }
 	
 	

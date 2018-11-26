@@ -21,32 +21,49 @@ import de.hshannover.inform.deinEigenerFirewall.app.Paket;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
+import de.hshannover.inform.deinEigenerFirewall.gui.Animation;
+import de.hshannover.inform.deinEigenerFirewall.gui.AnimationHandler;
 import de.hshannover.inform.deinEigenerFirewall.gui.Assets;
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
+/**
+ * GameDrawer class draws the game, which means all entities and Gameboard, it
+ * also have UI panel which shows all game parameters
+ * 
+ * @author bk3-4nz-u1
+ *
+ */
 @SuppressWarnings("serial")
 public class GameDrawer extends JPanel implements Observer {
 
 	private GUIController guic;
 	private BufferedImage backgroundImage;
 	private GameUIPanel gameUIPanel;
-	
+	private AnimationHandler animationHandler;
+	/**
+	 * Creates and inits new GameDrawer object
+	 * 
+	 * @param guic
+	 */
 	public GameDrawer(GUIController guic) {
 		this.guic = guic;
 		init();
 	}
 
+	/**
+	 * inits GameDrawer object
+	 */
 	private void init() {
 		// initialize and set bounds for window(layout)
 		setLayout(null);
 		setBounds(0, 0, guic.getWidth(), guic.getHeight());
-		
+
 		// inits a new UIPanel for game parameters on the side
 		gameUIPanel = new GameUIPanel(guic);
 		gameUIPanel.setLocation(guic.getGameWidth(), 0);
 		add(gameUIPanel);
-		
+
 		// add background image and set it to size of the window
 		backgroundImage = Utils.scaleImage(Utils.loadImage("res/images/gameBackground.png"), guic.getGameWidth(),
 				guic.getGameHeight());
@@ -56,7 +73,8 @@ public class GameDrawer extends JPanel implements Observer {
 		guic.getGameFassade().getEntityManager().addObserver(this);
 		// to get game refresh rate
 		guic.getGameFassade().getTicker().addObserver(this);
-
+		animationHandler = new AnimationHandler(guic);
+		add(animationHandler);
 	}
 
 	/**
@@ -90,6 +108,11 @@ public class GameDrawer extends JPanel implements Observer {
 		repaint();
 	}
 
+	/**
+	 * Draws all Entities on the screen
+	 * 
+	 * @param g Graphics object
+	 */
 	public void paintEntities(Graphics g) {
 
 		CopyOnWriteArrayList<Entity> entities = guic.getGameFassade().getEntities();
@@ -145,6 +168,7 @@ public class GameDrawer extends JPanel implements Observer {
 		MouseEvent e = (MouseEvent) arg;
 		Paket p = guic.getGameFassade().getEntityManager().getPaketAtLoc(e.getPoint());
 		if (p != null) {
+			animationHandler.addAnimation(new Animation(guic, p, animationHandler));
 			p.remove();
 		}
 	}

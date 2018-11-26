@@ -5,9 +5,15 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Utils {
 
@@ -38,6 +44,13 @@ public class Utils {
 		return img;
 	}
 	
+	/**
+	 * Scales the orginal image to new width and hieight
+	 * @param original
+	 * @param newWidth
+	 * @param newHeight
+	 * @return
+	 */
 	public static BufferedImage scaleImage(BufferedImage original, int newWidth, int newHeight) {
 		BufferedImage resized = new BufferedImage(newWidth, newHeight, original.getType());
 		Graphics2D g = resized.createGraphics();
@@ -48,5 +61,4 @@ public class Utils {
 		g.dispose();
 		return resized;
 	}
-
 }

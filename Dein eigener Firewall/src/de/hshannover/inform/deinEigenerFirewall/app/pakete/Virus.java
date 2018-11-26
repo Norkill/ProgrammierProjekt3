@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
 
+/**
+ * Virus paket, adds virus when reaches end should be removed
+ * @author Norbert
+ *
+ */
 public class Virus extends Paket {
 
 	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {

@@ -5,7 +5,7 @@ import de.hshannover.inform.deinEigenerFirewall.util.Timer;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /*
- * Wave Manager klasse der wahlt welches wave gerade lauft
+ * Wave Manager class which manages which pakets will be spawned and when
  */
 public class WaveManager {
 
@@ -19,7 +19,8 @@ public class WaveManager {
 	private int waveNumber;
 
 	/**
-	 * Erzeugt neuer WaveManager, wenn neue waves addiert ist es zu korrigieren
+	 * Creates a new WaveManager object and inits it
+	 * 
 	 * @param gcHandler
 	 */
 	public WaveManager(GameControllerHandler gcHandler) {
@@ -35,8 +36,8 @@ public class WaveManager {
 	}
 
 	/**
-	 * Wenn zeit abgelaufen setze aktuelles wave zufallig neu
-	 *  sonst prufe ob aktuelles wave kann pakete senden und mache das
+	 * Checks if current wave can spawn and if it is ended chooses a new one
+	 * randomly
 	 */
 	public void tick() {
 		if (waveTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (100 - waveNumber) / 100d)) {
@@ -48,7 +49,7 @@ public class WaveManager {
 	}
 
 	/**
-	 * Wenn zeit abgelaufen setze aktuelles wave zufallig neu
+	 * Sets new Wave
 	 */
 	private void setNextWave() {
 		int i = Utils.getRandomNumber100();
@@ -64,12 +65,12 @@ public class WaveManager {
 	}
 
 	/**
-	 * pruft nach der zeitlichen abstand zwischen einzigen spawns
+	 * Checks if actual wave can spawn new Pakets
 	 * 
-	 * @return true wenn moglich
+	 * @return true if can
 	 */
 	private boolean canSpawn() {
-		if(actualWave != null) {
+		if (actualWave != null) {
 			if (spawnTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (100 - waveNumber) / 100) / SPAWNS_IN_WAVE) {
 				return true;
 			}
@@ -78,7 +79,7 @@ public class WaveManager {
 	}
 
 	/**
-	 * spawns Pakete des aktuelles Waves
+	 * spawns Pakets of actual wave
 	 */
 	private void spawn() {
 		spawnTimer.reset();

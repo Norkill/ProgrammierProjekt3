@@ -12,7 +12,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
+import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 
+/**
+ * GameUIPanel class to show all game parameters like Score and Viruses
+ * 
+ * @author bk3-4nz-u1
+ *
+ */
 @SuppressWarnings("serial")
 public class GameUIPanel extends JPanel implements Observer {
 
@@ -22,28 +29,37 @@ public class GameUIPanel extends JPanel implements Observer {
 	private JLabel scoretext = new JLabel("Score");
 	private JLabel score = new JLabel("0");
 	private JLabel userExpText = new JLabel("User Experience");
-	private JLabel userExp = new JLabel("0");
+	private JLabel userExp = new JLabel("0 %");
 	private JLabel virusText = new JLabel("Virusen");
-	private JLabel virus = new JLabel("0");
+	private JLabel virus = new JLabel("0 / 3");
+	private boolean scoreHandled = false;
 
 	private GUIController guic;
 
+	/**
+	 * creates and inits GameUIPanel
+	 * 
+	 * @param guic GUIController
+	 */
 	public GameUIPanel(GUIController guic) {
 		this.guic = guic;
 		init();
 	}
 
+	/**
+	 * Inits gameUIPanel
+	 */
 	private void init() {
 		// initialize and set bounds for window(layout)
 		setLayout(new GridLayout(9, 1));
 		setBounds(guic.getGameWidth(), 0, guic.getWidth(), guic.getHeight());
-		
+
 		// add button to go back to menu
 		backButton.addActionListener(e -> {
+			guic.stopGame();
 			guic.setMenuState();
-			guic.getGameFassade().stopGame();
 		});
-		
+
 		add(backButton);
 
 		hscore = new JLabel("" + guic.getGameFassade().getTopHiScore());
@@ -70,33 +86,65 @@ public class GameUIPanel extends JPanel implements Observer {
 		repaint();
 	}
 
+	/**
+	 * Paints this component
+	 */
 	@Override
 	public void paintComponent(Graphics g) {
 		revalidate();
 		repaint();
 	}
 
+	/**
+	 * Reads all parameters form game new
+	 */
 	private void updateParameters() {
 		score.setText("" + guic.getGameFassade().getScore());
-		virus.setText("" + guic.getGameFassade().getViruses());
-		userExp.setText("" + guic.getGameFassade().getUserExperience());
+		int vir = (int) virus.getText().toCharArray()[0] - 48;
+		virus.setText("" + guic.getGameFassade().getViruses() + " / 3");
+		int vir2 = (int) virus.getText().toCharArray()[0] - 48;
+		if (vir != vir2) {
+			System.out.println(vir2);
+			if (vir2 == 1) {
+				SoundManager.playSound(SoundManager.ERROR);
+			}
+			if (vir2 == 2) {
+				SoundManager.playSound(SoundManager.ALARM);
+			}
+		}
+		userExp.setText("" + guic.getGameFassade().getUserExperience() + " %");
 	}
 
+	/**
+	 * Shows input box to get name of the player to save it as a Highscore, used
+	 * only if score high enough
+	 * 
+	 * @param pos
+	 */
 	private void showInputBox(Integer pos) {
-		if(pos > 0) {
-		String name = JOptionPane.showInputDialog("Gluckwunsch, du hast neues HiScore Erreicht,\n du bist " + pos
-				+ " mit " + guic.getGameFassade().getScore() + " Punkten!");
-		while (name == null) {
-			//wait for input
+		guic.stopGame();
+		if (scoreHandled == false) {
+			if (pos > 0) {
+				SoundManager.playSound(SoundManager.WON);
+				String name = JOptionPane.showInputDialog("Gluckwunsch, du hast neues HiScore Erreicht,\n du bist "
+						+ pos + " mit " + guic.getGameFassade().getScore() + " Punkten!");
+
+				guic.getGameFassade().setPlayerName(name);
+
+			} else {
+				SoundManager.playSound(SoundManager.LOST_VIRUS);
+				JOptionPane.showMessageDialog(null, "Du hast verloren");
+			}
+
+			guic.setMenuState();
 		}
-		guic.getGameFassade().setPlayerName(name);
-		
-		} else {
-			 JOptionPane.showMessageDialog(null, "Du hast verloren");
-		}
-		guic.setMenuState();
+		scoreHandled = true;
 	}
 
+	/**
+	 * update method called by GameParameterManager when any of the parameters
+	 * changed
+	 */
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		if (arg1 != null) {

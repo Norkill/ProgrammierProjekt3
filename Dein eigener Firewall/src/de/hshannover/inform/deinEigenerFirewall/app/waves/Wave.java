@@ -57,8 +57,6 @@ public abstract class Wave {
 				paketNumber++;
 				prob += probabilities[paketNumber];
 			}
-
-			// GameControllerHandler gcHandler, ArrayList<Point> way
 			try {
 				gcHandler.getEntityManager().addEntity((Entity) paketClasses[paketNumber]
 						.getConstructor(GameControllerHandler.class, ArrayList.class).newInstance(gcHandler, way));

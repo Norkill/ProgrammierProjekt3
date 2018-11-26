@@ -3,6 +3,13 @@ package de.hshannover.inform.deinEigenerFirewall.app;
 import java.awt.Point;
 import java.util.ArrayList;
 
+/**
+ * Abstract class Paket, extends the entity class, contains methods used by
+ * pakets like move
+ * 
+ * @author Norbert
+ *
+ */
 public abstract class Paket extends Entity {
 
 	protected double speed;
@@ -11,8 +18,13 @@ public abstract class Paket extends Entity {
 	private int targetNumber;
 	private boolean atTarget = false;
 	protected GameControllerHandler gcHandler;
-	
 
+	/**
+	 * Creates a new Paket(should not be called, use exact paket instead)
+	 * 
+	 * @param gcHandler
+	 * @param way
+	 */
 	public Paket(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		this.gcHandler = gcHandler;
 		this.way = way;
@@ -22,6 +34,9 @@ public abstract class Paket extends Entity {
 		getNextTarget();
 	}
 
+	/**
+	 * set next target towards which paket will move next
+	 */
 	private void getNextTarget() {
 		atTarget = false;
 		targetNumber++;
@@ -32,7 +47,9 @@ public abstract class Paket extends Entity {
 		target = way.get(targetNumber);
 	}
 
-	// TODO: check if one time check until target reached enough
+	/**
+	 * move towards next waypoint
+	 */
 	private void moveTowardsTarget() {
 		// erstelle coordinaten differenz vektor
 		double diffX = target.getX() - this.x;
@@ -52,10 +69,14 @@ public abstract class Paket extends Entity {
 		this.y += diffY / length * speed;
 	}
 
+	/**
+	 * called by GameController tells Paket to act
+	 */
 	public abstract void tick();
 
 	/**
-	 * Move towards target and notify observers about your changed location
+	 * Move towards target
+	 * 
 	 */
 	protected void move() {
 		if (atTarget) {
@@ -64,10 +85,19 @@ public abstract class Paket extends Entity {
 		moveTowardsTarget();
 	}
 
+	/**
+	 * called if this entity gets clicked(removed by player)
+	 */
 	public abstract void remove();
 
+	/**
+	 * called if paket reaches end of its wave
+	 */
 	protected abstract void atEnd();
 
+	/**
+	 * removes this paket
+	 */
 	protected abstract void die();
-	
+
 }

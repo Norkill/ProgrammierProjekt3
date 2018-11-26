@@ -17,6 +17,7 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
  * Klasse zum darstellen vom Hilfe menu
+ * 
  * @author Norbert
  *
  */
@@ -29,12 +30,20 @@ public class HelpMenu extends JPanel {
 
 	private BufferedImage helpImage;
 
+	/**
+	 * Creates new HelpMenu object and inits it
+	 * 
+	 * @param guic GUIController
+	 */
 	public HelpMenu(GUIController guic) {
 		this.guic = guic;
 
 		initHelp();
 	}
 
+	/**
+	 * inits helpMenu object
+	 */
 	private void initHelp() {
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));

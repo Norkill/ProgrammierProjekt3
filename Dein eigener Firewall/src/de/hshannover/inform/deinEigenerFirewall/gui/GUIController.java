@@ -11,13 +11,16 @@ import javax.swing.JFrame;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameController;
 import de.hshannover.inform.deinEigenerFirewall.app.GameFassade;
+import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 import de.hshannover.inform.deinEigenerFirewall.gui.menu.GameDrawer;
 import de.hshannover.inform.deinEigenerFirewall.gui.menu.HelpMenu;
 import de.hshannover.inform.deinEigenerFirewall.gui.menu.HiScoreMenu;
 import de.hshannover.inform.deinEigenerFirewall.gui.menu.MainMenu;
 
 /**
- * GUIController class which maintains the correct usage of JFrame, setting menus and communication between GameController
+ * GUIController class which maintains the correct usage of JFrame, setting
+ * menus and communication between GameController
+ * 
  * @author Norbert
  */
 public class GUIController {
@@ -28,6 +31,7 @@ public class GUIController {
 	private HelpMenu hm;
 	private GameController gc;
 	private MouseManager mouseManager;
+	private SoundManager sm;
 	protected static Assets assets;
 
 	private Font font = new Font(Font.SANS_SERIF, Font.BOLD, 20);
@@ -37,41 +41,54 @@ public class GUIController {
 	private JFrame frame;
 
 	/**
-	 * Creates a new GUIController object which maintains the correct usage of JFrame, setting menus and communication between GameController
+	 * Creates a new GUIController object which maintains the correct usage of
+	 * JFrame, setting menus and communication between GameController
+	 * 
 	 * @param frame
 	 */
 	public GUIController(JFrame frame) {
 		this.frame = frame;
-		
-		Graphics2D g2d = (Graphics2D)frame.getGraphics();
+
+		Graphics2D g2d = (Graphics2D) frame.getGraphics();
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		init();
 
 		assets = new Assets();
 		mouseManager = new MouseManager();
 		frame.getContentPane().addMouseListener(mouseManager);
+		System.out.println(frame.getContentPane().getWidth() + "width and height " + frame.getContentPane().getHeight());
 		
 		frame.getContentPane().add(mm);
 		frame.revalidate();
 		frame.repaint();
 		frame.pack();
 		currentState = 0;
-		
+
 	}
 
+	/**
+	 * inits the GUIController object with new menus
+	 */
 	private void init() {
+		sm = new SoundManager();
 		gc = new GameController();
 		mm = new MainMenu(this);
 		hsm = new HiScoreMenu(this);
 		hm = new HelpMenu(this);
 		gd = null;
 		
+
 		map = new HashMap<>();
 		map.put(0, mm);
 		map.put(1, hsm);
 		map.put(2, hm);
 	}
 
+	
+	public void stopGame() {
+		gc.setRunning(false);
+	}
+	
 	/**
 	 * Shows main menu on the JFrame
 	 */
@@ -111,15 +128,16 @@ public class GUIController {
 
 	/**
 	 * Shows game on the JFrame
-	 * @param speed of the game
+	 * 
+	 * @param speed  of the game
 	 * @param layout of game board to play on
 	 */
 	public void setGameState(Double speed, String layout) {
+		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
 		gc.resetGame();
 		gc.setSpeed(speed);
-		gc.initGameBoard(layout, getGameWidth(), getGameHeight());
 		gc.start();
-	
+		
 		gd = new GameDrawer(this);
 		mouseManager.addObserver(gd);
 		map.put(3, gd);
@@ -136,15 +154,13 @@ public class GUIController {
 	 */
 	public void setEndedState() {
 		currentState = -1;
+		gc.threadStop();
 		System.exit(0);
 	}
 
 	/**
-	 * shows actual state as int, which means:
-	 * 0 - main menu, 
-	 * 1 - hiscore menu, 
-	 * 2 - help menu, 
-	 * 3 - game
+	 * shows actual state as int, which means: 0 - main menu, 1 - hiscore menu, 2 -
+	 * help menu, 3 - game
 	 */
 	public int getCurrentState() {
 		return currentState;
@@ -156,36 +172,45 @@ public class GUIController {
 	public Font getFont() {
 		return font;
 	}
-	
+
 	/**
 	 * @return gamefassade object to get objects from game needed to display it
 	 */
 	public GameFassade getGameFassade() {
 		return gc.getGameFassade();
 	}
-	
+
 	/**
 	 * @return width of the pane inside the JFrame
 	 */
 	public int getWidth() {
 		return frame.getContentPane().getWidth();
 	}
+
 	/**
 	 * @return height of the pane inside the JFrame
 	 */
 	public int getHeight() {
 		return frame.getContentPane().getHeight();
 	}
+
 	/**
 	 * @return width of the game itself - space for UI elements
 	 */
 	public int getGameWidth() {
-		return getWidth()*8/10;
+		return getWidth() * 8 / 10;
 	}
+
 	/**
 	 * @return height of the game itself - space for UI elements
 	 */
 	public int getGameHeight() {
 		return getHeight();
-	}	
+	}
+	
+	public SoundManager getSoundmanager() {
+		return sm;
+	}
+	
+
 }

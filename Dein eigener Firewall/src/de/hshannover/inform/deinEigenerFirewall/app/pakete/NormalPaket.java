@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
-
+/**
+ * Just an ordinary paket, gives points when reaches end lowers userExperience when deleted too early
+ * @author Norbert
+ *
+ */
 public class NormalPaket extends Paket {
 
 	public NormalPaket(GameControllerHandler gcHandler, ArrayList<Point> way) {
@@ -18,7 +22,7 @@ public class NormalPaket extends Paket {
 	public void tick() {
 		move();
 	}
-
+	
 	@Override
 	public void remove() {
 		gcHandler.removeUserExperience(5);
