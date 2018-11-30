@@ -56,7 +56,6 @@ public class GUIController {
 		assets = new Assets();
 		mouseManager = new MouseManager();
 		frame.getContentPane().addMouseListener(mouseManager);
-		System.out.println(frame.getContentPane().getWidth() + "width and height " + frame.getContentPane().getHeight());
 		
 		frame.getContentPane().add(mm);
 		frame.revalidate();

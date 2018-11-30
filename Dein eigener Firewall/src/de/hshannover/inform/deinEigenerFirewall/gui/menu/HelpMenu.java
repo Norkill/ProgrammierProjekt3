@@ -40,6 +40,10 @@ public class HelpMenu extends JPanel {
 
 		initHelp();
 	}
+	
+	
+	
+	
 
 	/**
 	 * inits helpMenu object

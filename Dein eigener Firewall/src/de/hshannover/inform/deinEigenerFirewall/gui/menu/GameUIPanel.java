@@ -3,16 +3,20 @@ package de.hshannover.inform.deinEigenerFirewall.gui.menu;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.image.BufferedImage;
 import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
+import de.hshannover.inform.deinEigenerFirewall.gui.MyJButton;
 import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
+import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
  * GameUIPanel class to show all game parameters like Score and Viruses
@@ -23,7 +27,7 @@ import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 @SuppressWarnings("serial")
 public class GameUIPanel extends JPanel implements Observer {
 
-	private JButton backButton = new JButton("Spiel beenden");
+	private MyJButton backButton = new MyJButton(Utils.loadImage("res/images/exit.png"));
 	private JLabel hscoreText = new JLabel("HiScore");
 	private JLabel hscore;
 	private JLabel scoretext = new JLabel("Score");
@@ -35,6 +39,7 @@ public class GameUIPanel extends JPanel implements Observer {
 	private boolean scoreHandled = false;
 
 	private GUIController guic;
+	private BufferedImage background;
 
 	/**
 	 * creates and inits GameUIPanel
@@ -54,20 +59,19 @@ public class GameUIPanel extends JPanel implements Observer {
 		setLayout(new GridLayout(9, 1));
 		setBounds(guic.getGameWidth(), 0, guic.getWidth(), guic.getHeight());
 
+		background = Utils.loadImage("res/images/statPanel.png");
 		// add button to go back to menu
+		
 		backButton.addActionListener(e -> {
 			guic.stopGame();
 			guic.setMenuState();
 		});
-
+		
 		add(backButton);
-
+		
 		hscore = new JLabel("" + guic.getGameFassade().getTopHiScore());
 
-		hscore.setOpaque(true);
-		score.setOpaque(true);
-		virus.setOpaque(true);
-		userExp.setOpaque(true);
+		
 
 		add(hscoreText);
 		add(hscore);
@@ -79,9 +83,12 @@ public class GameUIPanel extends JPanel implements Observer {
 		add(userExp);
 		updateParameters();
 		for (Component c : getComponents()) {
+		    JComponent jc = (JComponent) c;
+		    jc.setOpaque(false);
 			c.setFont(guic.getFont());
 		}
 		guic.getGameFassade().addObserverToGameParameterManager(this);
+		
 		revalidate();
 		repaint();
 	}
@@ -91,6 +98,8 @@ public class GameUIPanel extends JPanel implements Observer {
 	 */
 	@Override
 	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		g.drawImage(background, 0, 0, null);
 		revalidate();
 		repaint();
 	}
