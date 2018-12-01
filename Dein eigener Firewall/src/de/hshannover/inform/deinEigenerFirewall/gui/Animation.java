@@ -29,12 +29,17 @@ public class Animation extends JComponent {
 		img = p.getImg();
 		x = (int) p.getX();
 		y = (int) p.getY();
-
-		if (Utils.getRandomNumber100() > 50)
+		
+		
+		rotationPoint = new Point(0, y);
+		if (Utils.getRandomNumber100() > 50) {
 			orientation = -1;
-	
-		rotationPoint = new Point((int) (guic.getGameWidth() / 2
-				+ (guic.getGameHeight() / 3 * ((Utils.getRandomNumber100() / 100))) * orientation ) + (guic.getGameWidth()/3*orientation), y);
+			rotationPoint.x = x - guic.getGameWidth()/2 + (Utils.getRandomNumber100()/100 * guic.getGameWidth());			
+		} else {
+			rotationPoint.x = x + guic.getGameWidth()/2 - (Utils.getRandomNumber100()/100 * guic.getGameWidth());	
+		}
+		
+		
 		
 		t = new Timer(1000 / 60, e -> {
 			angle += Math.toRadians(10) * orientation;

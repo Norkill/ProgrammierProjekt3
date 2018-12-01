@@ -303,4 +303,12 @@ public class GameParameterManager extends Observable {
 		return gameSpeed;
 	}
 
+	
+	public void forceSaveScore(int pos, int score, String name) {
+		hiScoreList.remove(pos-1);
+		hiScoreList.add(pos-1, score);
+		hiScoreNames.remove(pos-1);
+		hiScoreNames.add(pos-1, name);
+		saveHiScores();
+	}
 }

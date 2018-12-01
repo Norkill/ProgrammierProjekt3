@@ -1,6 +1,5 @@
 package de.hshannover.inform.deinEigenerFirewall.gui.menu;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
-import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
@@ -190,7 +188,6 @@ public class MainMenu extends JPanel {
 		speedSpinner.setOpaque(false);
 		speedSpinner.getEditor().setOpaque(false);
 		((JSpinner.DefaultEditor)speedSpinner.getEditor()).getTextField().setOpaque(false);
-	
 		layoutSpinner = new JSpinner(new SpinnerListModel(getLayoutList()));
 		layoutSpinner.setOpaque(false);
 		layoutSpinner.getEditor().setOpaque(false);

@@ -2,12 +2,11 @@ package de.hshannover.inform.deinEigenerFirewall.app.waves;
 
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 
-public class SpamAttack extends Wave {
+public class HackAttack extends Wave {
 
-	public SpamAttack(GameControllerHandler gcHandler) {
+	public HackAttack(GameControllerHandler gcHandler) {
 		super(gcHandler);
-		probabilities = new int[] { 20, 10, 50, 10, 5, 5, 0 };
-
+		probabilities = new int[] { 40, 0, 10, 10, 10, 30, 0 };
 	}
 
 }

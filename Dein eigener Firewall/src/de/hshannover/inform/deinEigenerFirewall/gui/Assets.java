@@ -15,6 +15,10 @@ public class Assets {
 	public static BufferedImage[] normalPaketImgs;
 	public static BufferedImage[] virusImgs;
 	public static BufferedImage[] spamImgs;
+	public static BufferedImage[] hackerImgs;
+	public static BufferedImage[] russianHackerImgs;
+	public static BufferedImage[] wormImgs;
+	public static BufferedImage[] trojanImgs;
 
 	/**
 	 * creates and inits Object Asets, after you can just use Assets.nameOfImg to
@@ -34,10 +38,22 @@ public class Assets {
 		normalPaketImgs[2] = Utils.loadImage("res/images/paket3.png");
 
 		virusImgs = new BufferedImage[1];
-		virusImgs[0] = Utils.loadImage("res/images/virus1.png");
+		virusImgs[0] = Utils.loadImage("res/images/virus.png");
 
 		spamImgs = new BufferedImage[1];
 		spamImgs[0] = Utils.loadImage("res/images/spam1.png");
+		
+		hackerImgs = new BufferedImage[1];
+		hackerImgs[0] = Utils.loadImage("res/images/hacker.png");
+		
+		russianHackerImgs = new BufferedImage[1];
+		russianHackerImgs[0] = Utils.loadImage("res/images/rushacker.png");
+		
+		wormImgs = new BufferedImage[1];
+		wormImgs[0] = Utils.loadImage("res/images/worm.png");
+		
+		trojanImgs = new BufferedImage[1];
+		trojanImgs[0] = Utils.loadImage("res/images/trojan.png");
 
 	}
 }

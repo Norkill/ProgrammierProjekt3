@@ -8,6 +8,7 @@ import de.hshannover.inform.deinEigenerFirewall.app.Paket;
 
 /**
  * Spam paket, removes userExperience when reaches end
+ * 
  * @author Norbert
  *
  */

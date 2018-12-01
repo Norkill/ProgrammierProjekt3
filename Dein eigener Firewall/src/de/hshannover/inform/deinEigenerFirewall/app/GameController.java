@@ -82,8 +82,6 @@ public class GameController implements Runnable {
 		long now;
 		long lastTime = System.nanoTime();
 		long timer = 0;
-		int ticks = 0;
-
 		while (running && !lost) {
 
 			now = System.nanoTime();
@@ -93,13 +91,10 @@ public class GameController implements Runnable {
 			lastTime = now;
 			if (delta >= 1) {
 				tick();
-				ticks++;
 				delta--;
 			}
 
 			if (timer >= 1000000000) {
-				System.out.println("Ticks and Frames: " + ticks);
-				ticks = 0;
 				timer = 0;
 			}
 		}
@@ -123,11 +118,9 @@ public class GameController implements Runnable {
 		if (running)
 			return;
 		running = true;
-		System.out.println("running");
 		thread = new Thread((Runnable) this);
-		System.out.println("new thread");
 		thread.start();
-		System.out.println("start");
+		
 	}
 
 	/**

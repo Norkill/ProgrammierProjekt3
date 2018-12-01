@@ -6,28 +6,31 @@ import java.util.ArrayList;
 
 import de.hshannover.inform.deinEigenerFirewall.app.Entity;
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Hacker;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.RussianSuperHacker;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Trojan;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Worm;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
- * Abstrakte klasse Wave, es generiert die Pakete nach wahrscheinlichkeiten die
- * in child klassen definiert sind (zB. NormalWave, VirusAttack..)
- * 
+ * Abstract class Wave, generates pakets based on probabilities from its child classes like NormalWave, VirusAttack
  * @author Norbert
  *
  */
 public abstract class Wave {
 
-	// Fur besondere Waves zu implementieren, liste aller paket namen und
-	// wahrscheinlichkeit dass dieser paket in diesem Wave erzeugt wird
-	// wahrscheinlichkeit IMMER in % (0-100)
+
+	//to implement by every Wave type
+	//every int of probabilities  is the chance of spawning a paket listed on same index in paketClasses array
 	protected int[] probabilities;
 
-	// Liste aller Pakate und ihre classen fur constructoren aufrufe
+	// list of all classes to construct new pakets
 	@SuppressWarnings("rawtypes")
-	protected Class[] paketClasses = { NormalPaket.class, Virus.class, Spam.class };
+	protected Class[] paketClasses = { NormalPaket.class, Virus.class, Spam.class, Trojan.class, Worm.class,
+			Hacker.class, RussianSuperHacker.class };
 
 	GameControllerHandler gcHandler;
 	private ArrayList<ArrayList<Point>> ways;
@@ -38,14 +41,10 @@ public abstract class Wave {
 
 	}
 
-	/**
-	 * Liest aller namen der Paketen und speichert die klassen in eine Map fur
-	 * konstruktoren zugriff
-	 */
+
 
 	/**
-	 * Spawns eine einzige "Welle" in den Wave(der normalerweise aus mehreren wellen
-	 * besteht)
+	 * one spawn in current wave(one wave is a few spawns)
 	 */
 	@SuppressWarnings("unchecked")
 	public void spawn() {

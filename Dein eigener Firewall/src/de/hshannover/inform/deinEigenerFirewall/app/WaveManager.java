@@ -11,28 +11,28 @@ public class WaveManager {
 
 	private Wave[] waves;
 	private int[] waveProbabilities;
-	private final long MILLIS_BETWEEN_WAVES = 10000;
+	private final long MILLIS_BETWEEN_WAVES;
 	private final long SPAWNS_IN_WAVE = 5;
 	private Timer waveTimer;
 	private Timer spawnTimer;
 	private Wave actualWave;
 	private int waveNumber;
-
+	
 	/**
 	 * Creates a new WaveManager object and inits it
 	 * 
 	 * @param gcHandler
 	 */
 	public WaveManager(GameControllerHandler gcHandler) {
-		// initializiert neues Timer und addiert 7 sekunden um 3 sekunden am anfang des
-		// spiels zu verzogern
+		// adds some time to timer to give player some time at the beginning of the game
 		waveTimer = new Timer();
 		waveTimer.addMillisElapsed(7000l);
 
 		waves = new Wave[] { new NormalWave(gcHandler), new RandomWave(gcHandler), new SpamAttack(gcHandler),
-				new VirusAttack(gcHandler) };
-		waveProbabilities = new int[] { 40, 30, 20, 10 };
+				new VirusAttack(gcHandler), new WormsTrojans(gcHandler), new HackAttack(gcHandler) };
+		waveProbabilities = new int[] {30, 20, 20, 10 , 10, 10};
 		spawnTimer = new Timer();
+		MILLIS_BETWEEN_WAVES = 8000 + gcHandler.getWays().size()*500;
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class WaveManager {
 	 * randomly
 	 */
 	public void tick() {
-		if (waveTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (100 - waveNumber) / 100d)) {
+		if (waveTimer.getMillisFormStart() > (MILLIS_BETWEEN_WAVES * (50 + waveNumber) / 50d)) {
 			setNextWave();
 		}
 		if (canSpawn()) {

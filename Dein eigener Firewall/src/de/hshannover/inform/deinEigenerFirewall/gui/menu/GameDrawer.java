@@ -18,9 +18,13 @@ import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.app.Entity;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Hacker;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.RussianSuperHacker;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Trojan;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
+import de.hshannover.inform.deinEigenerFirewall.app.pakete.Worm;
 import de.hshannover.inform.deinEigenerFirewall.gui.Animation;
 import de.hshannover.inform.deinEigenerFirewall.gui.AnimationHandler;
 import de.hshannover.inform.deinEigenerFirewall.gui.Assets;
@@ -41,6 +45,7 @@ public class GameDrawer extends JPanel implements Observer {
 	private BufferedImage backgroundImage;
 	private GameUIPanel gameUIPanel;
 	private AnimationHandler animationHandler;
+
 	/**
 	 * Creates and inits new GameDrawer object
 	 * 
@@ -63,7 +68,8 @@ public class GameDrawer extends JPanel implements Observer {
 		gameUIPanel = new GameUIPanel(guic);
 		gameUIPanel.setLocation(guic.getGameWidth(), 0);
 		add(gameUIPanel);
-
+		revalidate();
+		repaint();
 		// add background image and set it to size of the window
 		backgroundImage = Utils.scaleImage(Utils.loadImage("res/images/gameBackground.png"), guic.getGameWidth(),
 				guic.getGameHeight());
@@ -155,6 +161,15 @@ public class GameDrawer extends JPanel implements Observer {
 			e.setImg(Assets.virusImgs[0]);
 		} else if (e instanceof Spam) {
 			e.setImg(Assets.spamImgs[0]);
+		} else if (e instanceof Trojan) {
+			((Trojan) e).setImage2(Assets.trojanImgs[0]);
+			e.setImg(Assets.normalPaketImgs[Utils.getRandomNumber100() % Assets.normalPaketImgs.length]);
+		} else if (e instanceof Worm) {
+			e.setImg(Assets.wormImgs[0]);
+		} else if (e instanceof RussianSuperHacker) {
+			e.setImg(Assets.russianHackerImgs[0]);
+		} else if (e instanceof Hacker) {
+			e.setImg(Assets.hackerImgs[0]);
 		}
 	}
 

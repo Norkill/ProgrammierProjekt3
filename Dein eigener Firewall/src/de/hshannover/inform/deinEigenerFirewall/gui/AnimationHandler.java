@@ -12,15 +12,11 @@ import javax.swing.JComponent;
 @SuppressWarnings("serial")
 public class AnimationHandler extends JComponent{
 
-	private GUIController guic;
-	
 	/**
 	 * Creates a new AnimationHandler object
 	 * @param guic GUIController instance
 	 */
 	public AnimationHandler(GUIController guic) {
-		this.guic = guic;	
-		
 		setLayout(null);
 		setBounds(0, 0, guic.getGameWidth(), guic.getGameHeight());
 	}

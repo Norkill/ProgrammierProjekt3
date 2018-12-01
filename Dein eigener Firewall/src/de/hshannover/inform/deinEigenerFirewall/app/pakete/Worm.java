@@ -3,20 +3,29 @@ package de.hshannover.inform.deinEigenerFirewall.app.pakete;
 import java.awt.Point;
 import java.util.ArrayList;
 
+import javax.swing.Timer;
+
 import de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler;
 import de.hshannover.inform.deinEigenerFirewall.app.Paket;
+import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
- * Virus paket, adds virus when reaches end should be removed
+ * Worm Paket, has the ability to create new Worms while alive
  * 
  * @author Norbert
  *
  */
-public class Virus extends Paket {
+public class Worm extends Paket {
 
-	public Virus(GameControllerHandler gcHandler, ArrayList<Point> way) {
+	private Timer t;
+
+	public Worm(GameControllerHandler gcHandler, ArrayList<Point> way) {
 		super(gcHandler, way);
-		speed = 1 * gcHandler.getGameSpeed();
+		speed = 0.75 * gcHandler.getGameSpeed();
+		t = new Timer((int)((10000 - Utils.getRandomNumber100() * 40)/gcHandler.getGameSpeed()), e -> {
+			gcHandler.getEntityManager().addEntity(new Worm(gcHandler, way));
+		});
+		t.start();
 
 	}
 
@@ -28,20 +37,21 @@ public class Virus extends Paket {
 	@Override
 	public void remove() {
 		gcHandler.addUserExperience(1);
-		gcHandler.addScore(2);
+		gcHandler.addScore(1);
 		die();
 	}
 
 	@Override
 	protected void atEnd() {
-		gcHandler.removeScore(5);
-		gcHandler.addVirus();
+
+		gcHandler.removeScore(3);
 		gcHandler.removeUserExperience(10);
 		die();
 	}
 
 	@Override
 	protected void die() {
+		t.stop();
 		gcHandler.removeEntity(this);
 	}
 

@@ -7,14 +7,13 @@ import java.awt.image.BufferedImage;
 import java.util.Observable;
 import java.util.Observer;
 
-import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
-import de.hshannover.inform.deinEigenerFirewall.gui.MyJButton;
+import de.hshannover.inform.deinEigenerFirewall.gui.MyImageButton;
 import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
@@ -27,7 +26,8 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 @SuppressWarnings("serial")
 public class GameUIPanel extends JPanel implements Observer {
 
-	private MyJButton backButton = new MyJButton(Utils.loadImage("res/images/exit.png"));
+	private MyImageButton backButton = new MyImageButton(Utils.loadImage("res/images/exit.png"));
+	//private JButton backButton;
 	private JLabel hscoreText = new JLabel("HiScore");
 	private JLabel hscore;
 	private JLabel scoretext = new JLabel("Score");
@@ -48,6 +48,7 @@ public class GameUIPanel extends JPanel implements Observer {
 	 */
 	public GameUIPanel(GUIController guic) {
 		this.guic = guic;
+		
 		init();
 	}
 
@@ -61,13 +62,14 @@ public class GameUIPanel extends JPanel implements Observer {
 
 		background = Utils.loadImage("res/images/statPanel.png");
 		// add button to go back to menu
-		
+		backButton.setImage(Utils.scaleImage(Utils.loadImage("res/images/exit.png"), 250, 80));
+		add(backButton);
 		backButton.addActionListener(e -> {
 			guic.stopGame();
 			guic.setMenuState();
 		});
 		
-		add(backButton);
+	
 		
 		hscore = new JLabel("" + guic.getGameFassade().getTopHiScore());
 
@@ -113,7 +115,6 @@ public class GameUIPanel extends JPanel implements Observer {
 		virus.setText("" + guic.getGameFassade().getViruses() + " / 3");
 		int vir2 = (int) virus.getText().toCharArray()[0] - 48;
 		if (vir != vir2) {
-			System.out.println(vir2);
 			if (vir2 == 1) {
 				SoundManager.playSound(SoundManager.ERROR);
 			}
