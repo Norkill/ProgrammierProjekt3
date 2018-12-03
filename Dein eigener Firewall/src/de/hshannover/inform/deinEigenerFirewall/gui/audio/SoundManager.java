@@ -9,6 +9,8 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+import de.hshannover.inform.deinEigenerFirewall.util.Utils;
+
 /**
  * Sound Manager, saves all avaliable sounds and can play them
  * 
@@ -33,7 +35,7 @@ public class SoundManager {
 	 */
 	public static void playSound(Sound s) {
 		try {
-			File f = new File("./res/sounds/" + s.getName());
+			File f = Utils.loadFile("/sounds/" + s.getName());
 			AudioInputStream audioIn = AudioSystem.getAudioInputStream(f);
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);

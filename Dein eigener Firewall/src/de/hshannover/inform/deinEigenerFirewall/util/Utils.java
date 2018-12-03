@@ -4,11 +4,10 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
-import javax.imageio.stream.FileImageOutputStream;
 
 public class Utils {
 
@@ -27,16 +26,34 @@ public class Utils {
 	 * @param path - pfad zur image
 	 * @return image
 	 */
-	public static BufferedImage loadImage(String path) {
+	public static BufferedImage loadImage(String name) {
 		BufferedImage img = null;
 		
 		try {
-			img = ImageIO.read(new File(path));
+			//img = ImageIO.read(loadFile("/images/" + name));
+			img = ImageIO.read(Utils.class.getResource("/images/" + name));
 		} catch (Exception e) {
-			System.out.println("Error loading an Image from: " + path);	
+			System.out.println("Error loading an Image from /images/: " + name);	
 			e.printStackTrace();
 		}
 		return img;
+	}
+	
+	/**
+	 * Loads text file
+	 * @param path of this file
+	 * @return File instance of this file
+	 */
+	public static File loadFile(String path) {
+		File f = null;
+		try {
+			f = new File(Utils.class.getResource(path).toURI());
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return f;
 	}
 	
 	

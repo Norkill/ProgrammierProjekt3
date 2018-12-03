@@ -71,7 +71,7 @@ public class GameDrawer extends JPanel implements Observer {
 		revalidate();
 		repaint();
 		// add background image and set it to size of the window
-		backgroundImage = Utils.scaleImage(Utils.loadImage("res/images/gameBackground.png"), guic.getGameWidth(),
+		backgroundImage = Utils.scaleImage(Utils.loadImage("gameBackground.png"), guic.getGameWidth(),
 				guic.getGameHeight());
 		drawWaysOnBackground(backgroundImage);
 

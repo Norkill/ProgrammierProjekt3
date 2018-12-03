@@ -45,7 +45,7 @@ public class GameBoardModel {
 		Scanner scanner = null;
 
 		try {
-			scanner = new Scanner(new File(("/res/boards/" + fileName)));
+			scanner = new Scanner(new File(("res/boards/" + fileName)));
 
 			ArrayList<ArrayList<Point>> waystemp = new ArrayList<ArrayList<Point>>();
 

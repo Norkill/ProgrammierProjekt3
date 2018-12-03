@@ -86,7 +86,7 @@ public class HiScoreMenu extends JPanel {
 	 * Sets new Background image and a Timer to move it up and down to look better
 	 */
 	private void setAnimatedBackground() {
-		background = Utils.loadImage("res/images/menu.png");
+		background = Utils.loadImage("menu.png");
 		t = new Timer(1000 / 60, e -> { 
 			
 			repaint();

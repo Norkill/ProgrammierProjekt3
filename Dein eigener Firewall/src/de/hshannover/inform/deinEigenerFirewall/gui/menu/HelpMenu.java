@@ -51,20 +51,20 @@ public class HelpMenu extends JPanel {
 
 		
 
-		arrowlButton = new MyImageButton(Utils.loadImage("res/images/arrowl.png"));
+		arrowlButton = new MyImageButton(Utils.loadImage("arrowl.png"));
 		arrowlButton.setBounds(0, 0, 128, 720);
 		arrowlButton.addActionListener(e -> prevImg());
 
-		arrowrButton = new MyImageButton(Utils.loadImage("res/images/arrowr.png"));
+		arrowrButton = new MyImageButton(Utils.loadImage("arrowr.png"));
 		arrowrButton.setBounds(guic.getWidth() - 128, 0, 128, 720);
 		arrowrButton.addActionListener(e -> nextImg());
 		
-		backButton = new MyImageButton(Utils.scaleImage(Utils.loadImage("res/images/exit.png"), 250, 80));
+		backButton = new MyImageButton(Utils.scaleImage(Utils.loadImage("exit.png"), 250, 80));
 		backButton.setBounds(arrowlButton.getWidth()-1, 0, backButton.getImage().getWidth(), backButton.getImage().getHeight());
 		backButton.addActionListener(e -> guic.setMenuState());
 
-		helpImages = new BufferedImage[] { Utils.loadImage("res/images/help1.png"),
-				Utils.loadImage("res/images/help2.png"), Utils.loadImage("res/images/help3.png") };
+		helpImages = new BufferedImage[] { Utils.loadImage("help1.png"),
+				Utils.loadImage("help2.png"), Utils.loadImage("help3.png") };
 
 		add(backButton);
 		add(arrowlButton);

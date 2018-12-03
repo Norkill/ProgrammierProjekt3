@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Scanner;
 
+import de.hshannover.inform.deinEigenerFirewall.util.Utils;
+
 /**
  * GameParameterManager which keeps track of points, viruses, hiscores and other
  * game parameters
@@ -154,21 +156,20 @@ public class GameParameterManager extends Observable {
 	private void initHiScoreList() {
 		Scanner scanner = null;
 		hiScoreList = new ArrayList<>();
-		hiScoreNames = new ArrayList<>();
-		try {
-			scanner = new Scanner(this.getClass().getResource("/res/hiscores.txt").openStream());
+		hiScoreNames = new ArrayList<>();		
+			try {
+				scanner = new Scanner(Utils.loadFile("/hiscores.txt"));
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			while (scanner.hasNextLine()) {
 				hiScoreList.add(scanner.nextInt());
 				hiScoreNames.add(scanner.next());
-
 			}
 			scanner.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("File hiscores.txt not found!");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	/**
@@ -272,7 +273,8 @@ public class GameParameterManager extends Observable {
 	 */
 	private void saveHiScores() {
 		try {
-			File f = new File("/res/hiscores.txt");
+			//File f = new File("/res/hiscores.txt");
+			File f = Utils.loadFile("/hiscores.txt");
 			f.delete();
 			f.createNewFile();
 			BufferedWriter bw = new BufferedWriter(new FileWriter(f));

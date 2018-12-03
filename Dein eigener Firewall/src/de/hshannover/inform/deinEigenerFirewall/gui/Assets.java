@@ -33,27 +33,27 @@ public class Assets {
 	 */
 	private void init() {
 		normalPaketImgs = new BufferedImage[3];
-		normalPaketImgs[0] = Utils.loadImage("res/images/paket1.png");
-		normalPaketImgs[1] = Utils.loadImage("res/images/paket2.png");
-		normalPaketImgs[2] = Utils.loadImage("res/images/paket3.png");
+		normalPaketImgs[0] = Utils.loadImage("paket1.png");
+		normalPaketImgs[1] = Utils.loadImage("paket2.png");
+		normalPaketImgs[2] = Utils.loadImage("paket3.png");
 
 		virusImgs = new BufferedImage[1];
-		virusImgs[0] = Utils.loadImage("res/images/virus.png");
+		virusImgs[0] = Utils.loadImage("virus.png");
 
 		spamImgs = new BufferedImage[1];
-		spamImgs[0] = Utils.loadImage("res/images/spam1.png");
+		spamImgs[0] = Utils.loadImage("spam1.png");
 		
 		hackerImgs = new BufferedImage[1];
-		hackerImgs[0] = Utils.loadImage("res/images/hacker.png");
+		hackerImgs[0] = Utils.loadImage("hacker.png");
 		
 		russianHackerImgs = new BufferedImage[1];
-		russianHackerImgs[0] = Utils.loadImage("res/images/rushacker.png");
+		russianHackerImgs[0] = Utils.loadImage("rushacker.png");
 		
 		wormImgs = new BufferedImage[1];
-		wormImgs[0] = Utils.loadImage("res/images/worm.png");
+		wormImgs[0] = Utils.loadImage("worm.png");
 		
 		trojanImgs = new BufferedImage[1];
-		trojanImgs[0] = Utils.loadImage("res/images/trojan.png");
+		trojanImgs[0] = Utils.loadImage("trojan.png");
 
 	}
 }

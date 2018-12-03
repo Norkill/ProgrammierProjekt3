@@ -26,7 +26,7 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 @SuppressWarnings("serial")
 public class GameUIPanel extends JPanel implements Observer {
 
-	private MyImageButton backButton = new MyImageButton(Utils.loadImage("res/images/exit.png"));
+	private MyImageButton backButton = new MyImageButton(Utils.loadImage("exit.png"));
 	//private JButton backButton;
 	private JLabel hscoreText = new JLabel("HiScore");
 	private JLabel hscore;
@@ -60,9 +60,9 @@ public class GameUIPanel extends JPanel implements Observer {
 		setLayout(new GridLayout(9, 1));
 		setBounds(guic.getGameWidth(), 0, guic.getWidth(), guic.getHeight());
 
-		background = Utils.loadImage("res/images/statPanel.png");
+		background = Utils.loadImage("statPanel.png");
 		// add button to go back to menu
-		backButton.setImage(Utils.scaleImage(Utils.loadImage("res/images/exit.png"), 250, 80));
+		backButton.setImage(Utils.scaleImage(Utils.loadImage("exit.png"), 250, 80));
 		add(backButton);
 		backButton.addActionListener(e -> {
 			guic.stopGame();
