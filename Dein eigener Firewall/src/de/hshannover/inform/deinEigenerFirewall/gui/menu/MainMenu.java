@@ -97,7 +97,7 @@ public class MainMenu extends JPanel {
 		newGameButton = new MyJButton("Neues Spiel");
 
 		newGameButton.addActionListener(
-				e -> guic.setGameState((Double) speedSpinner.getValue(), (String) layoutSpinner.getValue()));
+				e -> guic.setGameState((Double) speedSpinner.getValue(), "/boards/" +(String) layoutSpinner.getValue()));
 
 		hiScoreButton = new MyJButton("Hiscores");
 		hiScoreButton.addActionListener(e -> guic.setHiScoreMenuState());

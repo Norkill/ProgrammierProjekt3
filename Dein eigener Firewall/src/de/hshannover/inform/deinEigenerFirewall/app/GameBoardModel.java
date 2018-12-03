@@ -1,10 +1,11 @@
 package de.hshannover.inform.deinEigenerFirewall.app;
 
 import java.awt.Point;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
  * GameBoardModel class, loads gameBoard from File, needs to be initialized
@@ -45,7 +46,7 @@ public class GameBoardModel {
 		Scanner scanner = null;
 
 		try {
-			scanner = new Scanner(new File(("res/boards/" + fileName)));
+			scanner = new Scanner(Utils.loadFile(fileName));
 
 			ArrayList<ArrayList<Point>> waystemp = new ArrayList<ArrayList<Point>>();
 
