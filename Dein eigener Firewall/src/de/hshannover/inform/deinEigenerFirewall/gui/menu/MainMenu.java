@@ -2,6 +2,7 @@ package de.hshannover.inform.deinEigenerFirewall.gui.menu;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
@@ -44,7 +45,7 @@ public class MainMenu extends JPanel {
 	private JSpinner layoutSpinner;
 	private ArrayList<Double> speeds;
 	private JSpinner speedSpinner;
-	
+
 	private BufferedImage background;
 	private Timer t;
 	private int imgY = 0;
@@ -70,22 +71,22 @@ public class MainMenu extends JPanel {
 	 */
 	private void setAnimatedBackground() {
 		background = Utils.loadImage("res/images/menu.png");
-		t = new Timer(1000 / 60, e -> { 
-			
+		t = new Timer(1000 / 60, e -> {
+
 			repaint();
-			if(imgY>guic.getGameHeight())
+			if (imgY > guic.getGameHeight())
 				up = false;
-			if(imgY<0)
+			if (imgY < 0)
 				up = true;
-			
-			if(up)
+
+			if (up)
 				imgY++;
 			else
 				imgY--;
 		});
 		t.start();
 	}
-	
+
 	/**
 	 * inits MainMenu with all the labels and buttons
 	 */
@@ -93,13 +94,12 @@ public class MainMenu extends JPanel {
 		setLayout(new GridLayout(7, 1, 20, 20));
 		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-		
 		newGameButton = new MyJButton("Neues Spiel");
-		
+
 		newGameButton.addActionListener(
 				e -> guic.setGameState((Double) speedSpinner.getValue(), (String) layoutSpinner.getValue()));
 
-		hiScoreButton = new MyJButton("HiScores");
+		hiScoreButton = new MyJButton("Hiscores");
 		hiScoreButton.addActionListener(e -> guic.setHiScoreMenuState());
 
 		helpButton = new MyJButton("Hilfe");
@@ -129,25 +129,25 @@ public class MainMenu extends JPanel {
 		grids[1].add(speedSpinner);
 		grids[1].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[1].setOpaque(false);
-		
+
 		grids[2] = new JPanel(new GridLayout(1, 3));
 		grids[2].add(layout);
 		grids[2].add(layoutSpinner);
 		grids[2].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[2].setOpaque(false);
-		
+
 		grids[3] = new JPanel(new GridLayout(1, 3));
 		grids[3].add(hiScoreButton);
 		grids[3].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[3].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[3].setOpaque(false);
-		
+
 		grids[4] = new JPanel(new GridLayout(1, 3));
 		grids[4].add(helpButton);
 		grids[4].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[4].add(Box.createRigidArea(new Dimension(0, 15)));
 		grids[4].setOpaque(false);
-		
+
 		grids[5] = new JPanel(new GridLayout(1, 3));
 		grids[5].add(closeButton);
 		grids[5].add(Box.createRigidArea(new Dimension(0, 15)));
@@ -162,19 +162,18 @@ public class MainMenu extends JPanel {
 		add(grids[5]);
 
 		setFontToComponents();
-
+		title.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 40));
 		repaint();
 	}
-	
+
 	/**
 	 * Paints this component
 	 */
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawImage(background, 0,0-imgY,null);
+		g.drawImage(background, 0, 0 - imgY, null);
 	}
-	
 
 	/**
 	 * inits speed and layout spinners
@@ -187,13 +186,14 @@ public class MainMenu extends JPanel {
 		speedSpinner = new JSpinner(new SpinnerListModel(speeds));
 		speedSpinner.setOpaque(false);
 		speedSpinner.getEditor().setOpaque(false);
-		((JSpinner.DefaultEditor)speedSpinner.getEditor()).getTextField().setOpaque(false);
+		((JSpinner.DefaultEditor) speedSpinner.getEditor()).getTextField().setOpaque(false);
 		layoutSpinner = new JSpinner(new SpinnerListModel(getLayoutList()));
 		layoutSpinner.setOpaque(false);
 		layoutSpinner.getEditor().setOpaque(false);
-		((JSpinner.DefaultEditor)layoutSpinner.getEditor()).getTextField().setOpaque(false);
-		
+		((JSpinner.DefaultEditor) layoutSpinner.getEditor()).getTextField().setOpaque(false);
+
 	}
+
 	/**
 	 * loads all the filenames from boards directory
 	 * 

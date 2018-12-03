@@ -10,10 +10,21 @@ import javax.swing.JButton;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 
+
+/**
+ * Special button with preprogrammed sound effects and image
+ * @author Norbert
+ *
+ */
 @SuppressWarnings("serial")
 public class MyImageButton extends JButton{
 
 	private BufferedImage img;
+	
+	/**
+	 * Creates a new Button with sound and image
+	 * @param img
+	 */
 	public MyImageButton(BufferedImage img) {
 		super();
 		this.img = img;
@@ -47,5 +58,9 @@ public class MyImageButton extends JButton{
 	
 	public void setImage(BufferedImage img) {
 		this.img = img;
+	}
+	
+	public BufferedImage getImage() {
+		return img;
 	}
 }

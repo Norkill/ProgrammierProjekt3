@@ -9,9 +9,18 @@ import javax.swing.JButton;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager;
 
+/**
+ * Just JButton with look and sounds 
+ * @author Norbert
+ *
+ */
 @SuppressWarnings("serial")
 public class MyJButton extends JButton {
 
+	/**
+	 * Creates a new MyJButton 
+	 * @param label text to be displayed
+	 */
 	public MyJButton(String label) {
 		super(label);
 		setFocusPainted(false);

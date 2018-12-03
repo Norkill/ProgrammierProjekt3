@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="de.hshannover.inform.deinEigenerFirewall.Main" project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/Main.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="222" y="126"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="de.hshannover.inform.deinEigenerFirewall.Launcher" project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/Launcher.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="429" y="91"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.GameBoardModel" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/GameBoardModel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="217" x="1919" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.GameFassade" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/GameFassade.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="297" width="297" x="3250" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.Ticker" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/Ticker.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="202" x="2176" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.WaveManager" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/WaveManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="215" x="2691" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.GameController" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/GameController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="459" width="290" x="2745" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.Entity" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/Entity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2144" y="1221"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.GameControllerHandler" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/GameControllerHandler.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3772" y="1620"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.GameParameterManager" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/GameParameterManager.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="264" x="2946" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.EntityManager" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/EntityManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="233" x="2418" y="536"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.Paket" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/Paket.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1717" y="1587"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/Virus.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="253" x="2485" y="1997"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.Hacker" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/Hacker.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1429" y="1936"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.Worm" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/Worm.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="255" x="2190" y="1997"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.Spam" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/Spam.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="254" x="1599" y="1997"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.RussianSuperHacker" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/RussianSuperHacker.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1399" y="2111"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.NormalPaket" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/NormalPaket.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="286" x="2778" y="1997"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.pakete.Trojan" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/pakete/Trojan.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="257" x="1893" y="1997"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.Wave" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/Wave.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="232" x="2689" y="1197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.HackAttack" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/HackAttack.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="2729" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.VirusAttack" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/VirusAttack.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="2436" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.RandomWave" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/RandomWave.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="2164" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.NormalWave" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/NormalWave.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="3001" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.SpamAttack" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/SpamAttack.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="3273" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="de.hshannover.inform.deinEigenerFirewall.app.waves.WormsTrojans" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/app/waves/WormsTrojans.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="232" x="1892" y="1660"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.Assets" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/Assets.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="625" y="1520"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.MyImageButton" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/MyImageButton.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="177" y="519"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.MouseManager" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/MouseManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="865" y="1493"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.AnimationHandler" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/AnimationHandler.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="177" y="912"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.GUIController" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/GUIController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1191" y="287"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.Animation" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/Animation.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="192" y="1135"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.Sound" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/audio/Sound.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1114" y="1953"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/audio/SoundManager.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1117" y="1457"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.MainMenu" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/MainMenu.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1682" y="772"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameDrawer" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/GameDrawer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="497" y="913"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HelpMenu" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/HelpMenu.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="578" y="1213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameUIPanel" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/GameUIPanel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="496" y="520"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HiScoreMenu" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/HiScoreMenu.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1338" y="989"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Utils" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/util/Utils.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="725" y="119"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Timer" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/util/Timer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2593" y="1012"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.MyJButton" 
+    project="Dein eigener Firewall" 
+    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/MyJButton.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1660" y="1248"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="43">    
+    <bendpoint x="2669" y="1951"/>    
+    <bendpoint x="2367" y="1952"/>    
+    <bendpoint x="1960" y="1869"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="44">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="45" name="animationHandler"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="48" name="LOST_VIRUS">        
+        <position height="18" width="74" x="904" y="1890"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="16" width="23" x="952" y="1920"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="51" name="backButton"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="54" name="gcHandler">        
+        <position height="18" width="57" x="3620" y="1357"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="16" width="23" x="3678" y="1314"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <bendpoint x="3671" y="507"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="57" name="gcHandler">        
+        <position height="18" width="57" x="3619" y="1337"/>      
+      </attribute>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="16" width="23" x="3679" y="1358"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="60" name="mm"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="63" name="guic"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="66" name="POINT">        
+        <position height="18" width="39" x="898" y="1821"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1011" y="1748"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="69" name="guic"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="72" name="gcHandler">        
+        <position height="18" width="57" x="3616" y="1317"/>      
+      </attribute>      
+      <multiplicity id="73" minimum="0" maximum="1">        
+        <position height="16" width="23" x="3680" y="1337"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="75" name="hsm"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="78">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="79" name="sm"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="81">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="82" name="entityManager"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <bendpoint x="2308" y="399"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="85" name="gameBoardModel"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="88" name="backButton"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="91" name="helpButton">        
+        <position height="18" width="59" x="1570" y="1042"/>      
+      </attribute>      
+      <multiplicity id="92" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1616" y="1084"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="93">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="94">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="95">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="96" name="newGameButton">        
+        <position height="18" width="89" x="1529" y="1081"/>      
+      </attribute>      
+      <multiplicity id="97" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1737" y="1043"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="98">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="99">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="100" name="mouseManager"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="102">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="103" name="hiScoreButton">        
+        <position height="18" width="76" x="1669" y="1083"/>      
+      </attribute>      
+      <multiplicity id="104" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1632" y="1043"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="105">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="106" name="guic"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="108">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="109" name="ticker"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="111">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="112" name="gcHandler"/>      
+      <multiplicity id="113" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="115" name="gd"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="118" name="assets"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="120">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="121" name="waveManager"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="124" name="actualWave">        
+        <position height="18" width="65" x="2741" y="1148"/>      
+      </attribute>      
+      <multiplicity id="125" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2809" y="1151"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="126">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="127">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="128" name="hm"/>      
+      <multiplicity id="129" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="130">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="131">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="132" name="spawnTimer">        
+        <position height="18" width="68" x="2488" y="900"/>      
+      </attribute>      
+      <multiplicity id="133" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2558" y="900"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="134">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="135" name="gc"/>      
+      <multiplicity id="136" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="137">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="138" name="ALARM">        
+        <position height="18" width="47" x="896" y="1794"/>      
+      </attribute>      
+      <multiplicity id="139" minimum="0" maximum="1">        
+        <position height="16" width="23" x="966" y="1770"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="140">    
+    <bendpoint x="3603" y="535"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="141" name="gc"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="143">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="144" name="waveTimer">        
+        <position height="18" width="62" x="2496" y="921"/>      
+      </attribute>      
+      <multiplicity id="145" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2570" y="922"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="146">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="147">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="148">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="150">    
+    <bendpoint x="1985" y="1850"/>    
+    <bendpoint x="3481" y="1842"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="151" name="gcHandler"/>      
+      <multiplicity id="152" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="153">    
+    <bendpoint x="2442" y="1985"/>    
+    <bendpoint x="1925" y="1889"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="154">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="155" name="guic"/>      
+      <multiplicity id="156" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="158" name="gpm"/>      
+      <multiplicity id="159" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="161" name="SOMETHING">        
+        <position height="18" width="69" x="902" y="1869"/>      
+      </attribute>      
+      <multiplicity id="162" minimum="0" maximum="1">        
+        <position height="16" width="23" x="984" y="1871"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="164" name="ERROR">        
+        <position height="18" width="45" x="897" y="1723"/>      
+      </attribute>      
+      <multiplicity id="165" minimum="0" maximum="1">        
+        <position height="16" width="23" x="951" y="1795"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="166">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="167" name="MOUSE_ON_BUTTON">        
+        <position height="18" width="114" x="894" y="1746"/>      
+      </attribute>      
+      <multiplicity id="168" minimum="0" maximum="1">        
+        <position height="16" width="23" x="973" y="1849"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="170" name="waves">        
+        <position height="18" width="42" x="2750" y="1132"/>      
+      </attribute>      
+      <multiplicity id="171" minimum="0" maximum="2147483647">        
+        <position height="16" width="21" x="2805" y="1136"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="173" name="LOST_EXP">        
+        <position height="18" width="62" x="898" y="1846"/>      
+      </attribute>      
+      <multiplicity id="174" minimum="0" maximum="1">        
+        <position height="16" width="23" x="948" y="1722"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="175">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="176" name="closeButton">        
+        <position height="18" width="65" x="1669" y="1044"/>      
+      </attribute>      
+      <multiplicity id="177" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1747" y="1083"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="178">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="179" name="gf"/>      
+      <multiplicity id="180" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="181">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="182" name="entities"/>      
+      <multiplicity id="183" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="184">    
+    <bendpoint x="2094" y="1964"/>    
+    <bendpoint x="1877" y="1903"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="185">    
+    <bendpoint x="1809" y="1885"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="186">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="187" name="WON">        
+        <position height="18" width="35" x="909" y="1917"/>      
+      </attribute>      
+      <multiplicity id="188" minimum="0" maximum="1">        
+        <position height="16" width="23" x="980" y="1894"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="189">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="190" name="guic"/>      
+      <multiplicity id="191" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="192">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="193" name="gameUIPanel"/>      
+      <multiplicity id="194" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="195">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="196" name="ON_CLICK">        
+        <position height="18" width="60" x="897" y="1766"/>      
+      </attribute>      
+      <multiplicity id="197" minimum="0" maximum="1">        
+        <position height="16" width="23" x="951" y="1823"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

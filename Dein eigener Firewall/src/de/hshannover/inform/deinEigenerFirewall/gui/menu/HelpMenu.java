@@ -1,22 +1,18 @@
 package de.hshannover.inform.deinEigenerFirewall.gui.menu;
 
-import java.awt.Component;
-import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
+import de.hshannover.inform.deinEigenerFirewall.gui.MyImageButton;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
- * Klasse zum darstellen vom Hilfe menu
+ * This class shows help menu
  * 
  * @author Norbert
  *
@@ -25,10 +21,15 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 public class HelpMenu extends JPanel {
 
 	private GUIController guic;
-	private JButton backButton;
-	private JLabel imageLabel;
+	private MyImageButton backButton;
+	
 
-	private BufferedImage helpImage;
+	private MyImageButton arrowlButton;
+	private MyImageButton arrowrButton;
+
+	private BufferedImage[] helpImages;
+
+	private int currentImg = 0;
 
 	/**
 	 * Creates new HelpMenu object and inits it
@@ -40,33 +41,76 @@ public class HelpMenu extends JPanel {
 
 		initHelp();
 	}
-	
-	
-	
-	
 
 	/**
 	 * inits helpMenu object
 	 */
 	private void initHelp() {
-		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+		setLayout(null);
+		setBounds(0, 0, guic.getGameWidth(), guic.getGameHeight());
 
-		backButton = new JButton("Zuruck");
+		
+
+		arrowlButton = new MyImageButton(Utils.loadImage("res/images/arrowl.png"));
+		arrowlButton.setBounds(0, 0, 128, 720);
+		arrowlButton.addActionListener(e -> prevImg());
+
+		arrowrButton = new MyImageButton(Utils.loadImage("res/images/arrowr.png"));
+		arrowrButton.setBounds(guic.getWidth() - 128, 0, 128, 720);
+		arrowrButton.addActionListener(e -> nextImg());
+		
+		backButton = new MyImageButton(Utils.scaleImage(Utils.loadImage("res/images/exit.png"), 250, 80));
+		backButton.setBounds(arrowlButton.getWidth()-1, 0, backButton.getImage().getWidth(), backButton.getImage().getHeight());
 		backButton.addActionListener(e -> guic.setMenuState());
 
-		helpImage = Utils.loadImage("res/images/helpImage.png");
-		imageLabel = new JLabel(new ImageIcon(helpImage));
+		helpImages = new BufferedImage[] { Utils.loadImage("res/images/help1.png"),
+				Utils.loadImage("res/images/help2.png"), Utils.loadImage("res/images/help3.png") };
 
 		add(backButton);
-		add(Box.createRigidArea(new Dimension(0, 15)));
-		add(imageLabel);
-
-		for (Component c : getComponents()) {
-			c.setFont(guic.getFont());
-		}
-
+		add(arrowlButton);
+		add(arrowrButton);
+		
 		repaint();
+	}
+
+	
+	/**
+	 * Sets next image of help menu
+	 */
+	private void nextImg() {
+		if (currentImg == 2) {
+			currentImg = 0;
+		} else {
+			currentImg++;
+		}
+		repaint();
+	}
+
+	/**
+	 * Sets previous image of help menu
+	 */
+	private void prevImg() {
+		if (currentImg == 0) {
+			currentImg = 2;
+		} else {
+			currentImg--;
+		}
+		repaint();
+	}
+
+	/**
+	 * Draws this component
+	 */
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setRenderingHint(
+                RenderingHints.KEY_ANTIALIASING, 
+                RenderingHints.VALUE_ANTIALIAS_ON);
+		g2d.drawImage(helpImages[currentImg], arrowlButton.getWidth(), 0,
+				guic.getWidth() - arrowlButton.getWidth() - arrowrButton.getWidth(), guic.getGameHeight(), null);
 	}
 
 }

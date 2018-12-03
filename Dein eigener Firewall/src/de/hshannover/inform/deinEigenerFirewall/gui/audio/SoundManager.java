@@ -24,9 +24,7 @@ public class SoundManager {
 	public static final Sound MOUSE_ON_BUTTON = new Sound("mouse_on_button.wav");
 	public static final Sound ON_CLICK = new Sound("on_click.wav");
 	public static final Sound POINT = new Sound("point.wav");
-	public static final Sound SOMETHING = new Sound("something.wav");
 	public static final Sound WON = new Sound("won.wav");
-	// public static final Sound = new Sound("");
 
 	/**
 	 * Plays a sound used as SoundManager.playSound(SoundManager.A_SOUND);

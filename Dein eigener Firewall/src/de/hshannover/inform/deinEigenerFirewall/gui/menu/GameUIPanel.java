@@ -34,7 +34,7 @@ public class GameUIPanel extends JPanel implements Observer {
 	private JLabel score = new JLabel("0");
 	private JLabel userExpText = new JLabel("User Experience");
 	private JLabel userExp = new JLabel("0 %");
-	private JLabel virusText = new JLabel("Virusen");
+	private JLabel virusText = new JLabel("Viren");
 	private JLabel virus = new JLabel("0 / 3");
 	private boolean scoreHandled = false;
 

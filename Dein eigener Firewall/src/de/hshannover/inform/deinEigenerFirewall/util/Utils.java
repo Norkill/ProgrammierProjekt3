@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageOutputStream;
 
 public class Utils {
 
@@ -31,12 +32,14 @@ public class Utils {
 		
 		try {
 			img = ImageIO.read(new File(path));
-		} catch (IOException e) {
+		} catch (Exception e) {
 			System.out.println("Error loading an Image from: " + path);	
 			e.printStackTrace();
 		}
 		return img;
 	}
+	
+	
 	
 	/**
 	 * Scales the orginal image to new width and hieight
