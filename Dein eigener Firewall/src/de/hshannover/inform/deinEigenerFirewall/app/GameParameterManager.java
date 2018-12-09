@@ -157,10 +157,10 @@ public class GameParameterManager extends Observable {
 		Scanner scanner = null;
 		hiScoreList = new ArrayList<>();
 		hiScoreNames = new ArrayList<>();		
-			try {
-				scanner = new Scanner(Utils.loadFile("/hiscores.txt"));
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
+		try {
+				Utils.createHiScoresList();
+				scanner = new Scanner(Utils.loadHiscores());
+		} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 			
@@ -169,6 +169,7 @@ public class GameParameterManager extends Observable {
 				hiScoreNames.add(scanner.next());
 			}
 			scanner.close();
+		
 		
 	}
 
@@ -274,7 +275,7 @@ public class GameParameterManager extends Observable {
 	private void saveHiScores() {
 		try {
 			//File f = new File("/res/hiscores.txt");
-			File f = Utils.loadFile("/hiscores.txt");
+			File f = Utils.loadHiscores();
 			f.delete();
 			f.createNewFile();
 			BufferedWriter bw = new BufferedWriter(new FileWriter(f));

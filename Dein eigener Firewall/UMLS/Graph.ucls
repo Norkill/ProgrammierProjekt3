@@ -318,18 +318,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.AnimationHandler" 
-    project="Dein eigener Firewall" 
-    file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/AnimationHandler.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="177" y="912"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="31" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.GUIController" 
+  <class id="30" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.GUIController" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/GUIController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -340,7 +329,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="32" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.Animation" 
+  <class id="31" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.Animation" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/Animation.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -351,7 +340,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.Sound" 
+  <class id="32" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.Sound" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/audio/Sound.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -362,7 +351,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager" 
+  <class id="33" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.audio.SoundManager" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/audio/SoundManager.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -373,7 +362,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.MainMenu" 
+  <class id="34" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.MainMenu" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/MainMenu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -384,7 +373,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameDrawer" 
+  <class id="35" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameDrawer" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/GameDrawer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -395,7 +384,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="37" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HelpMenu" 
+  <class id="36" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HelpMenu" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/HelpMenu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -406,7 +395,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="38" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameUIPanel" 
+  <class id="37" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.GameUIPanel" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/GameUIPanel.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -417,7 +406,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="39" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HiScoreMenu" 
+  <class id="38" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.menu.HiScoreMenu" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/menu/HiScoreMenu.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -428,7 +417,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="40" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Utils" 
+  <class id="39" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Utils" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/util/Utils.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -439,7 +428,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Timer" 
+  <class id="40" language="java" name="de.hshannover.inform.deinEigenerFirewall.util.Timer" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/util/Timer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -450,7 +439,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="42" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.MyJButton" 
+  <class id="41" language="java" name="de.hshannover.inform.deinEigenerFirewall.gui.MyJButton" 
     project="Dein eigener Firewall" 
     file="/Dein eigener Firewall/src/de/hshannover/inform/deinEigenerFirewall/gui/MyJButton.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -461,422 +450,426 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="43">    
-    <bendpoint x="2669" y="1951"/>    
-    <bendpoint x="2367" y="1952"/>    
-    <bendpoint x="1960" y="1869"/>    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="12"/>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
   </generalization>  
-  <association id="44">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="45" name="mm">        
+  <association id="43">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="44" name="entities">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="46" minimum="0" maximum="1">        
+      <multiplicity id="45" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <generalization id="49">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <generalization id="50">    
-    <bendpoint x="2094" y="1964"/>    
-    <bendpoint x="1877" y="1903"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="51">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="52" name="animationHandler">        
+  <association id="46">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="47" name="backButton">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="53" minimum="0" maximum="1">        
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="50" name="guic">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="30" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="52">    
+    <bendpoint x="2442" y="1985"/>    
+    <bendpoint x="1925" y="1889"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="53">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
   <association id="54">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="55" name="gc">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="55" name="MOUSE_ON_BUTTON">        
+        <position height="18" width="114" x="894" y="1746"/>      
       </attribute>      
       <multiplicity id="56" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="16" width="23" x="973" y="1849"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="32" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="57">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="58" name="hiScoreButton">        
-        <position height="18" width="76" x="1669" y="1083"/>      
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="58" name="closeButton">        
+        <position height="18" width="65" x="1669" y="1044"/>      
       </attribute>      
       <multiplicity id="59" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1747" y="1083"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="61">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="62" name="hiScoreButton">        
+        <position height="18" width="76" x="1669" y="1083"/>      
+      </attribute>      
+      <multiplicity id="63" minimum="0" maximum="1">        
         <position height="16" width="23" x="1632" y="1043"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
+    <end type="TARGET" refId="41" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="60">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="61" name="LOST_VIRUS">        
-        <position height="18" width="74" x="904" y="1890"/>      
-      </attribute>      
-      <multiplicity id="62" minimum="0" maximum="1">        
-        <position height="16" width="23" x="952" y="1920"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="63">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
   <association id="64">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="65" name="POINT">        
-        <position height="18" width="39" x="898" y="1821"/>      
-      </attribute>      
-      <multiplicity id="66" minimum="0" maximum="1">        
-        <position height="16" width="23" x="1011" y="1748"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="67">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <association id="68">    
-    <bendpoint x="1985" y="1850"/>    
-    <bendpoint x="3481" y="1842"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="69" name="gcHandler">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="70" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="71">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="72" name="sm">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="73" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="74">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="75" name="LOST_EXP">        
-        <position height="18" width="62" x="898" y="1846"/>      
-      </attribute>      
-      <multiplicity id="76" minimum="0" maximum="1">        
-        <position height="16" width="23" x="948" y="1722"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="77">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="78" name="ON_CLICK">        
-        <position height="18" width="60" x="897" y="1766"/>      
-      </attribute>      
-      <multiplicity id="79" minimum="0" maximum="1">        
-        <position height="16" width="23" x="951" y="1823"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="80">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="81" name="backButton">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="82" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="83">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="84" name="guic">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="85" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="86">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="87">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="88" name="entityManager">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="89" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="90">    
-    <bendpoint x="1809" y="1885"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="91">    
     <bendpoint x="3671" y="507"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="92" name="gcHandler">        
+      <attribute id="65" name="gcHandler">        
         <position height="18" width="57" x="3619" y="1337"/>      
       </attribute>      
-      <multiplicity id="93" minimum="0" maximum="1">        
+      <multiplicity id="66" minimum="0" maximum="1">        
         <position height="16" width="23" x="3679" y="1358"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="94">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="95" name="gd">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="96" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="97">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="98" name="spawnTimer">        
-        <position height="18" width="68" x="2488" y="900"/>      
-      </attribute>      
-      <multiplicity id="99" minimum="0" maximum="1">        
-        <position height="16" width="23" x="2558" y="900"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="41" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="100">    
-    <end type="SOURCE" refId="21"/>    
+  <generalization id="67">    
+    <end type="SOURCE" refId="23"/>    
     <end type="TARGET" refId="20"/>  
   </generalization>  
-  <association id="101">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="102" name="ALARM">        
-        <position height="18" width="47" x="896" y="1794"/>      
-      </attribute>      
-      <multiplicity id="103" minimum="0" maximum="1">        
-        <position height="16" width="23" x="966" y="1770"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="104">    
-    <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <association id="105">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="106" name="assets">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="107" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="108">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="109" name="backButton">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="110" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="28" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="111">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="112" name="guic">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="113" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="114">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="115" name="helpButton">        
-        <position height="18" width="59" x="1570" y="1042"/>      
-      </attribute>      
-      <multiplicity id="116" minimum="0" maximum="1">        
-        <position height="16" width="23" x="1616" y="1084"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="117">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="118" name="gcHandler">        
-        <position height="18" width="57" x="3620" y="1357"/>      
-      </attribute>      
-      <multiplicity id="119" minimum="0" maximum="1">        
-        <position height="16" width="23" x="3678" y="1314"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="120">    
+  <association id="68">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="121" name="actualWave">        
+      <attribute id="69" name="actualWave">        
         <position height="18" width="65" x="2741" y="1148"/>      
       </attribute>      
-      <multiplicity id="122" minimum="0" maximum="1">        
+      <multiplicity id="70" minimum="0" maximum="1">        
         <position height="16" width="23" x="2809" y="1151"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="123">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="124" name="gameUIPanel">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="125" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="38" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="126">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="127" name="hm">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="128" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="37" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="129">    
+  <generalization id="71">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="72">    
     <bendpoint x="3603" y="535"/>    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="130" name="gc">        
+      <attribute id="73" name="gc">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="131" minimum="0" maximum="1">        
+      <multiplicity id="74" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="132">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="133" name="newGameButton">        
-        <position height="18" width="89" x="1529" y="1081"/>      
-      </attribute>      
-      <multiplicity id="134" minimum="0" maximum="1">        
-        <position height="16" width="23" x="1737" y="1043"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="135">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="136" name="gcHandler">        
+  <generalization id="75">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <association id="76">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="77" name="mouseManager">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="137" minimum="0" maximum="1">        
+      <multiplicity id="78" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="80" name="spawnTimer">        
+        <position height="18" width="68" x="2488" y="900"/>      
+      </attribute>      
+      <multiplicity id="81" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2558" y="900"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="83" name="assets">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="84" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="86" name="guic">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="87" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="89">    
+    <bendpoint x="2094" y="1964"/>    
+    <bendpoint x="1877" y="1903"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="90">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="91" name="gpm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="92" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="93">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="94" name="hsm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="95" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="97" name="WON">        
+        <position height="18" width="35" x="909" y="1917"/>      
+      </attribute>      
+      <multiplicity id="98" minimum="0" maximum="1">        
+        <position height="16" width="23" x="980" y="1894"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="99">    
+    <bendpoint x="1985" y="1850"/>    
+    <bendpoint x="3481" y="1842"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="100" name="gcHandler">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="101" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="138">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="139" name="guic">        
+  <association id="102">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="103" name="guic">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="140" minimum="0" maximum="1">        
+      <multiplicity id="104" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="30" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="141">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <association id="142">    
+  <association id="105">    
+    <bendpoint x="2308" y="399"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="143" name="waveManager">        
+      <attribute id="106" name="gameBoardModel">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="144" minimum="0" maximum="1">        
+      <multiplicity id="107" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="108">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="109" name="gcHandler">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="110" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="111">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="112" name="LOST_EXP">        
+        <position height="18" width="62" x="898" y="1846"/>      
+      </attribute>      
+      <multiplicity id="113" minimum="0" maximum="1">        
+        <position height="16" width="23" x="948" y="1722"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="115" name="waveTimer">        
+        <position height="18" width="62" x="2496" y="921"/>      
+      </attribute>      
+      <multiplicity id="116" minimum="0" maximum="1">        
+        <position height="16" width="23" x="2570" y="922"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="117">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <association id="118">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="119" name="gcHandler">        
+        <position height="18" width="57" x="3616" y="1317"/>      
+      </attribute>      
+      <multiplicity id="120" minimum="0" maximum="1">        
+        <position height="16" width="23" x="3680" y="1337"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="121">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="122" name="newGameButton">        
+        <position height="18" width="89" x="1529" y="1081"/>      
+      </attribute>      
+      <multiplicity id="123" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1737" y="1043"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="124">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="125" name="mm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="126" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="127">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="128" name="gc">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="129" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="131" name="ALARM">        
+        <position height="18" width="47" x="896" y="1794"/>      
+      </attribute>      
+      <multiplicity id="132" minimum="0" maximum="1">        
+        <position height="16" width="23" x="966" y="1770"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="134" name="gf">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="135" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="136">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="137">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="138" name="entityManager">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="139" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="140">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="141">    
+    <bendpoint x="1809" y="1885"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="142">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="143" name="gcHandler">        
+        <position height="18" width="57" x="3620" y="1357"/>      
+      </attribute>      
+      <multiplicity id="144" minimum="0" maximum="1">        
+        <position height="16" width="23" x="3678" y="1314"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="145">    
@@ -892,194 +885,178 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="148">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="149" name="guic">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="149" name="ON_CLICK">        
+        <position height="18" width="60" x="897" y="1766"/>      
       </attribute>      
       <multiplicity id="150" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
+        <position height="16" width="23" x="951" y="1823"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
+    <end type="TARGET" refId="32" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="151">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="152" name="guic">        
-        <position height="0" width="0" x="0" y="0"/>      
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="152" name="helpButton">        
+        <position height="18" width="59" x="1570" y="1042"/>      
       </attribute>      
       <multiplicity id="153" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="31" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="154">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="155" name="gcHandler">        
-        <position height="18" width="57" x="3616" y="1317"/>      
-      </attribute>      
-      <multiplicity id="156" minimum="0" maximum="1">        
-        <position height="16" width="23" x="3680" y="1337"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="157">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="158" name="ERROR">        
-        <position height="18" width="45" x="897" y="1723"/>      
-      </attribute>      
-      <multiplicity id="159" minimum="0" maximum="1">        
-        <position height="16" width="23" x="951" y="1795"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="160">    
-    <bendpoint x="2442" y="1985"/>    
-    <bendpoint x="1925" y="1889"/>    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="161">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="162" name="MOUSE_ON_BUTTON">        
-        <position height="18" width="114" x="894" y="1746"/>      
-      </attribute>      
-      <multiplicity id="163" minimum="0" maximum="1">        
-        <position height="16" width="23" x="973" y="1849"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="164">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <association id="165">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="166" name="gf">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="167" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="168">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="169" name="gpm">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="170" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="171">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="172" name="waves">        
-        <position height="18" width="42" x="2750" y="1132"/>      
-      </attribute>      
-      <multiplicity id="173" minimum="0" maximum="2147483647">        
-        <position height="16" width="21" x="2805" y="1136"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="174">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="175" name="entities">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="176" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="177">    
-    <end type="SOURCE" refId="34" navigable="false">      
-      <attribute id="178" name="WON">        
-        <position height="18" width="35" x="909" y="1917"/>      
-      </attribute>      
-      <multiplicity id="179" minimum="0" maximum="1">        
-        <position height="16" width="23" x="980" y="1894"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="33" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="180">    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="181" name="closeButton">        
-        <position height="18" width="65" x="1669" y="1044"/>      
-      </attribute>      
-      <multiplicity id="182" minimum="0" maximum="1">        
-        <position height="16" width="23" x="1747" y="1083"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="183">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="184" name="waveTimer">        
-        <position height="18" width="62" x="2496" y="921"/>      
-      </attribute>      
-      <multiplicity id="185" minimum="0" maximum="1">        
-        <position height="16" width="23" x="2570" y="922"/>      
+        <position height="16" width="23" x="1616" y="1084"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="41" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="186">    
-    <bendpoint x="2308" y="399"/>    
+  <association id="154">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="155" name="guic">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="156" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="158" name="sm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="159" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="161" name="gd">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="162" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="187" name="gameBoardModel">        
+      <attribute id="164" name="waveManager">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="188" minimum="0" maximum="1">        
+      <multiplicity id="165" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="189">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="190" name="mouseManager">        
+  <association id="166">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="167" name="hm">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="191" minimum="0" maximum="1">        
+      <multiplicity id="168" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
+    <end type="TARGET" refId="36" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="192">    
-    <end type="SOURCE" refId="31" navigable="false">      
-      <attribute id="193" name="hsm">        
+  <generalization id="169">    
+    <bendpoint x="2669" y="1951"/>    
+    <bendpoint x="2367" y="1952"/>    
+    <bendpoint x="1960" y="1869"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="170">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="171" name="LOST_VIRUS">        
+        <position height="18" width="74" x="904" y="1890"/>      
+      </attribute>      
+      <multiplicity id="172" minimum="0" maximum="1">        
+        <position height="16" width="23" x="952" y="1920"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="173">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="174" name="backButton">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="194" minimum="0" maximum="1">        
+      <multiplicity id="175" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="39" navigable="true"/>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="176">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="177" name="ERROR">        
+        <position height="18" width="45" x="897" y="1723"/>      
+      </attribute>      
+      <multiplicity id="178" minimum="0" maximum="1">        
+        <position height="16" width="23" x="951" y="1795"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="179">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="180" name="POINT">        
+        <position height="18" width="39" x="898" y="1821"/>      
+      </attribute>      
+      <multiplicity id="181" minimum="0" maximum="1">        
+        <position height="16" width="23" x="1011" y="1748"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="182">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="183" name="gameUIPanel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="184" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="185">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="186" name="guic">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="187" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="188">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="189" name="waves">        
+        <position height="18" width="42" x="2750" y="1132"/>      
+      </attribute>      
+      <multiplicity id="190" minimum="0" maximum="2147483647">        
+        <position height="16" width="21" x="2805" y="1136"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -6,7 +6,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
@@ -97,7 +96,7 @@ public class MainMenu extends JPanel {
 		newGameButton = new MyJButton("Neues Spiel");
 
 		newGameButton.addActionListener(
-				e -> guic.setGameState((Double) speedSpinner.getValue(), "/boards/" +(String) layoutSpinner.getValue()));
+				e -> guic.setGameState((Double) speedSpinner.getValue(),"/boards/"+(String) layoutSpinner.getValue()));
 
 		hiScoreButton = new MyJButton("Hiscores");
 		hiScoreButton.addActionListener(e -> guic.setHiScoreMenuState());
@@ -113,7 +112,7 @@ public class MainMenu extends JPanel {
 
 		speed = new JLabel("Geschwindigkeit", SwingConstants.CENTER);
 		speed.setToolTipText("Wahle die Geschwindigkeit des Spiels\n (Je schneller desto mehr Punkte) ");
-		title = new JLabel("The Firewall", SwingConstants.CENTER);
+		title = new JLabel("Dein eigener Firewall", SwingConstants.CENTER);
 
 		initSpinners();
 
@@ -173,6 +172,7 @@ public class MainMenu extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(background, 0, 0 - imgY, null);
+		
 	}
 
 	/**
@@ -187,7 +187,7 @@ public class MainMenu extends JPanel {
 		speedSpinner.setOpaque(false);
 		speedSpinner.getEditor().setOpaque(false);
 		((JSpinner.DefaultEditor) speedSpinner.getEditor()).getTextField().setOpaque(false);
-		layoutSpinner = new JSpinner(new SpinnerListModel(getLayoutList()));
+		layoutSpinner = new JSpinner(new SpinnerListModel(Utils.getBoardNames()));
 		layoutSpinner.setOpaque(false);
 		layoutSpinner.getEditor().setOpaque(false);
 		((JSpinner.DefaultEditor) layoutSpinner.getEditor()).getTextField().setOpaque(false);
@@ -199,7 +199,7 @@ public class MainMenu extends JPanel {
 	 * 
 	 * @return list of filenames
 	 */
-	private ArrayList<String> getLayoutList() {
+/*	private ArrayList<String> getLayoutList() {
 		ArrayList<String> results = new ArrayList<>();
 
 		File[] files = Utils.loadFile("/boards").listFiles();
@@ -211,7 +211,7 @@ public class MainMenu extends JPanel {
 		}
 		return results;
 	}
-
+*/
 	/**
 	 * sets font to all its components
 	 */

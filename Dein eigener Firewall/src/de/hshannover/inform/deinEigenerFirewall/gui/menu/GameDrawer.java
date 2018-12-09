@@ -26,7 +26,6 @@ import de.hshannover.inform.deinEigenerFirewall.app.pakete.Trojan;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Virus;
 import de.hshannover.inform.deinEigenerFirewall.app.pakete.Worm;
 import de.hshannover.inform.deinEigenerFirewall.gui.Animation;
-import de.hshannover.inform.deinEigenerFirewall.gui.AnimationHandler;
 import de.hshannover.inform.deinEigenerFirewall.gui.Assets;
 import de.hshannover.inform.deinEigenerFirewall.gui.GUIController;
 import de.hshannover.inform.deinEigenerFirewall.util.Utils;
@@ -44,7 +43,7 @@ public class GameDrawer extends JPanel implements Observer {
 	private GUIController guic;
 	private BufferedImage backgroundImage;
 	private GameUIPanel gameUIPanel;
-	private AnimationHandler animationHandler;
+
 
 	/**
 	 * Creates and inits new GameDrawer object
@@ -79,8 +78,6 @@ public class GameDrawer extends JPanel implements Observer {
 		guic.getGameFassade().getEntityManager().addObserver(this);
 		// to get game refresh rate
 		guic.getGameFassade().getTicker().addObserver(this);
-		animationHandler = new AnimationHandler(guic);
-		add(animationHandler);
 	}
 
 	/**
@@ -108,10 +105,12 @@ public class GameDrawer extends JPanel implements Observer {
 	 */
 	@Override
 	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		g.drawImage(backgroundImage, 0, 0, guic.getGameWidth(), guic.getGameHeight(), null);
 		paintEntities(g);
-		revalidate();
-		repaint();
+
+		// ?????????????????????????????
+
 	}
 
 	/**
@@ -120,7 +119,6 @@ public class GameDrawer extends JPanel implements Observer {
 	 * @param g Graphics object
 	 */
 	public void paintEntities(Graphics g) {
-
 		CopyOnWriteArrayList<Entity> entities = guic.getGameFassade().getEntities();
 		for (Entity e : entities) {
 			Rectangle r = e.getCollisionBox();
@@ -148,6 +146,8 @@ public class GameDrawer extends JPanel implements Observer {
 			// arg - tick (new Frame must be rendered)
 		} else {
 			revalidate();
+			repaint();
+
 		}
 	}
 
@@ -171,6 +171,7 @@ public class GameDrawer extends JPanel implements Observer {
 		} else if (e instanceof Hacker) {
 			e.setImg(Assets.hackerImgs[0]);
 		}
+
 	}
 
 	/**
@@ -183,8 +184,18 @@ public class GameDrawer extends JPanel implements Observer {
 		MouseEvent e = (MouseEvent) arg;
 		Paket p = guic.getGameFassade().getEntityManager().getPaketAtLoc(e.getPoint());
 		if (p != null) {
-			animationHandler.addAnimation(new Animation(guic, p, animationHandler));
+			addAnimation(new Animation(guic, p, this));
 			p.remove();
 		}
+
 	}
+	
+	public void addAnimation(Animation a) {
+		add(a);
+	}
+	
+	public void removeAnimation(Animation a) {
+		remove(a);
+	}
+	
 }

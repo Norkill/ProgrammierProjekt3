@@ -27,7 +27,7 @@ import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 public class GameUIPanel extends JPanel implements Observer {
 
 	private MyImageButton backButton = new MyImageButton(Utils.loadImage("exit.png"));
-	//private JButton backButton;
+	// private JButton backButton;
 	private JLabel hscoreText = new JLabel("HiScore");
 	private JLabel hscore;
 	private JLabel scoretext = new JLabel("Score");
@@ -48,7 +48,7 @@ public class GameUIPanel extends JPanel implements Observer {
 	 */
 	public GameUIPanel(GUIController guic) {
 		this.guic = guic;
-		
+
 		init();
 	}
 
@@ -68,12 +68,8 @@ public class GameUIPanel extends JPanel implements Observer {
 			guic.stopGame();
 			guic.setMenuState();
 		});
-		
-	
-		
-		hscore = new JLabel("" + guic.getGameFassade().getTopHiScore());
 
-		
+		hscore = new JLabel("" + guic.getGameFassade().getTopHiScore());
 
 		add(hscoreText);
 		add(hscore);
@@ -85,12 +81,12 @@ public class GameUIPanel extends JPanel implements Observer {
 		add(userExp);
 		updateParameters();
 		for (Component c : getComponents()) {
-		    JComponent jc = (JComponent) c;
-		    jc.setOpaque(false);
+			JComponent jc = (JComponent) c;
+			jc.setOpaque(false);
 			c.setFont(guic.getFont());
 		}
 		guic.getGameFassade().addObserverToGameParameterManager(this);
-		
+
 		revalidate();
 		repaint();
 	}
@@ -102,8 +98,7 @@ public class GameUIPanel extends JPanel implements Observer {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(background, 0, 0, null);
-		revalidate();
-		repaint();
+
 	}
 
 	/**
@@ -161,7 +156,6 @@ public class GameUIPanel extends JPanel implements Observer {
 			showInputBox((Integer) arg1);
 		}
 		updateParameters();
-		revalidate();
 		repaint();
 	}
 

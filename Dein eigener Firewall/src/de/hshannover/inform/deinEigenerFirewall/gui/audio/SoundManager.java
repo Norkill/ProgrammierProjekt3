@@ -1,15 +1,14 @@
 package de.hshannover.inform.deinEigenerFirewall.gui.audio;
 
-import java.io.File;
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-
-import de.hshannover.inform.deinEigenerFirewall.util.Utils;
 
 /**
  * Sound Manager, saves all avaliable sounds and can play them
@@ -35,13 +34,15 @@ public class SoundManager {
 	 */
 	public static void playSound(Sound s) {
 		try {
-			File f = Utils.loadFile("/sounds/" + s.getName());
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(f);
+			InputStream in = SoundManager.class.getResourceAsStream("/sounds/" + s.name);
+			InputStream bufferedIn = new BufferedInputStream(in);
+			AudioInputStream audioIn = AudioSystem.getAudioInputStream(bufferedIn);
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);
 			clip.start();
+			in.close();
+			bufferedIn.close();
 		} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
